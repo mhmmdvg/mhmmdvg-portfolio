@@ -8,7 +8,7 @@ import {
 } from 'react-icons/ai';
 
 const twstyles = {
-  hero: 'bg-black text-white pt-20 sm:pt-28 justify-center',
+  hero: 'text-black dark:bg-black dark:text-white bg-white transition pt-20 sm:pt-28 justify-center',
   heroContainer:
     'flex mx-auto flex-wrap mt-10 lg:px-24 2xl:px-56 items-center justify-center',
   myName:
@@ -22,7 +22,7 @@ const twstyles = {
 
 const Hero: NextPage = () => {
   return (
-    <section className={twstyles.hero}>
+    <div className={twstyles.hero}>
       <div className="container mx-auto">
         <div className={twstyles.heroContainer}>
           <div className="text-center w-full px-3 sm:w-3/4 xl:w-1/2 xl:pr-20 lg:w-1/2 lg:px-0 lg:text-left ">
@@ -43,11 +43,13 @@ const Hero: NextPage = () => {
               about technologies.
             </p>
             <button className={twstyles.button}>
-              <div className="text-white bg-black py-2 px-6">About Me</div>
+              <div className="dark:text-white dark:bg-black bg-white text-black transition py-2 px-6">
+                About Me
+              </div>
             </button>
 
             <div className="container mx-auto lg:hidden flex">
-              <div className="lg:w-96 mx-auto text-white mt-10">
+              <div className="lg:w-96 mx-auto dark:text-white text-black transition mt-10">
                 <div className="flex flex-row space-x-8 lg:py-3 lg:px-12 rounded-2xl">
                   <AiOutlineInstagram className="w-14 h-14" />
                   <AiFillLinkedin className="w-14 h-14" />
@@ -71,13 +73,13 @@ const Hero: NextPage = () => {
                 team work.
               </p>
             </div>
-            <button className="bg-white text-black  py-3 px-6 inline-flex rounded-sm">
+            <button className=" dark:bg-white dark:text-black bg-black text-white transition py-3 px-6 inline-flex rounded-sm">
               Contact Me
             </button>
           </div>
         </div>
       </div>
-    </section>
+    </div>
   );
 };
 

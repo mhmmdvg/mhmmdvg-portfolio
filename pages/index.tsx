@@ -9,8 +9,6 @@ const Home: NextPage = () => {
       <Hero />
       <Project />
       <Tools />
-      <Tools />
-      <Tools />
     </>
   );
 };

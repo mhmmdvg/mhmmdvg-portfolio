@@ -3,17 +3,17 @@ import React from 'react';
 
 const Project: NextPage = () => {
   return (
-    <section className="bg-black text-white pt-2 sm:pt-16">
+    <section className="dark:bg-black bg-white transition pt-2 sm:pt-16">
       <div className="container mx-auto">
         <div className="flex flex-wrap mt-10 px-3 lg:px-24 lg:items-end justify-center">
-          <div className="flex flex-row w-full items-center sm:px-28 lg:px-0 lg:w-1/2 2xl:px-32">
+          <div className="flex flex-row w-full items-center dark:text-white text-black transition sm:px-28 lg:px-0 lg:w-1/2 2xl:px-32">
             <h1 className="font-sfpro font-extrabold text-9xl">3+</h1>
             <p className="px-5 font-sfpro">
               total project
               <br /> web and <br /> mobile
             </p>
           </div>
-          <div className="hidden lg:w-1/2 lg:flex flex-row items-center lg:justify-end sm:hidden 2xl:pr-32">
+          <div className="hidden lg:w-1/2 lg:flex flex-row items-center dark:text-white text-black lg:justify-end sm:hidden 2xl:pr-32">
             <a
               onClick={() => console.log('click')}
               className="cursor-pointer font-sfpro"
@@ -21,7 +21,7 @@ const Project: NextPage = () => {
               See all projects →
             </a>
           </div>
-          <div className="grid gap-4 py-5 grid-cols-2 lg:grid-cols-4 lg:gap-12 md:gap-6 xl:gap-6">
+          <div className="text-white grid gap-4 py-5 grid-cols-2 lg:grid-cols-4 lg:gap-12 md:gap-6 xl:gap-6">
             <div className="w-44 h-44 relative bg-gradient-to-r from-indigo-500 via-purple-500 to-pink-500 md:w-64 md:h-64 lg:w-52 lg:h-52 xl:w-64 xl:h-64">
               <div className="flex flex-col items-end">
                 <h1 className="font-sfpro font-extrabold text-[9.8rem] md:text-[14.3rem] xl:text-[14.3rem] opacity-40 lg:text-[11.7rem]">

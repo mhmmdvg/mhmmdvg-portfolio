@@ -7,11 +7,11 @@ import { ThemeProvider } from 'next-themes';
 function MyApp({ Component, pageProps }: AppProps) {
   return (
     <>
-      <Navbar />
       <ThemeProvider attribute="class">
+        <Navbar />
         <Component {...pageProps} />
+        <Socmed />
       </ThemeProvider>
-      <Socmed />
     </>
   );
 }
