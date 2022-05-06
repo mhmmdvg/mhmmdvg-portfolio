@@ -11,7 +11,7 @@ const DarkMode: NextPage = () => {
     <button
       aria-label="Toggle Dark Mode"
       type="button"
-      onClick={() => setTheme(theme === 'dark' ? 'light' : 'dark')}
+      onClick={() => setTheme(theme === 'light' ? 'dark' : 'light')}
     >
       {mounted && (
         <svg

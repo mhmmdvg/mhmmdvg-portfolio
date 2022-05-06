@@ -4,7 +4,6 @@ import React from 'react';
 interface ToolsItemProps {
   icons: JSX.Element;
   name: string;
-  alt: string;
 }
 
 const TechToolsItem: NextPage<ToolsItemProps> = (props) => {
@@ -22,7 +21,9 @@ const TechToolsItem: NextPage<ToolsItemProps> = (props) => {
           alt={alt}
         /> */}
         {icons}
-        <p className="font-sfpro text-xl font-normal">{name}</p>
+        <p className="font-sfpro hidden sm:flex sm:text-xl font-normal">
+          {name}
+        </p>
       </div>
     </div>
   );

@@ -24,7 +24,6 @@ const Tools: NextPage = () => {
               <TechToolsItem
                 key={item.name}
                 icons={item.icons}
-                alt={item.alternatif}
                 name={item.name}
               />
             ))}

@@ -236,44 +236,36 @@ const TypescriptIcons = () => {
 interface ToolsType {
   icons: JSX.Element;
   name: string;
-  alternatif: string;
 }
 
 const IconsTools: Array<ToolsType> = [
   {
     icons: JavaIcon(),
     name: 'Java',
-    alternatif: 'Java',
   },
   {
     icons: JsIcons(),
     name: 'Javascript',
-    alternatif: 'Javascript',
   },
   {
     icons: TypescriptIcons(),
     name: 'Typescript',
-    alternatif: 'Typescript',
   },
   {
     icons: ReactIcons(),
     name: 'React',
-    alternatif: 'React',
   },
   {
     icons: NextJS(),
     name: 'NextJS',
-    alternatif: 'NextJS',
   },
   {
     icons: Flutter(),
     name: 'Flutter',
-    alternatif: 'Flutter',
   },
   {
     icons: Figma(),
     name: 'Figma',
-    alternatif: 'Figma',
   },
 ];
 
