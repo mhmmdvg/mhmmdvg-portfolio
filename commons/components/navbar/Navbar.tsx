@@ -1,4 +1,6 @@
 import { NextPage } from 'next';
+import Link from 'next/link';
+import { useRouter } from 'next/router';
 import React from 'react';
 import DarkMode from './DarkMode';
 
@@ -10,12 +12,26 @@ const twstyles = {
   line: 'mx-auto dark:border-[#383838] border-[#525252] xl:w-[70rem]',
 };
 
+interface NavItemType {
+  name: string;
+  path: string;
+}
+
+const LinkNavItems: Array<NavItemType> = [
+  { name: 'Home', path: '/' },
+  { name: 'Project', path: '/project' },
+  { name: 'Blog', path: '/blog' },
+  { name: 'About Me', path: '/aboutme' },
+];
+
 const Navbar: NextPage = () => {
+  const router = useRouter();
+
   return (
     <header className={twstyles.header}>
       <div className={twstyles.navContainer}>
         <nav className={twstyles.navbar}>
-          <div className="w-10 xl:w-14 lg:w-12">
+          <div className="w-6 sm:w-10 xl:w-14 lg:w-12">
             <svg
               // width="78"
               // height="61"
@@ -38,22 +54,21 @@ const Navbar: NextPage = () => {
           </div>
 
           <ul className="flex space-x-5 sm:space-x-12 font-sfpro text-sm xl:text-lg lg:text-lg text-[#494949] dark:text-[#494949]">
-            <li>
-              <a className="hover:text-white transition cursor-pointer">Home</a>
-            </li>
-            <li>
-              <a className="hover:text-white transition cursor-pointer">
-                Project
-              </a>
-            </li>
-            <li>
-              <a className="hover:text-white transition cursor-pointer">Blog</a>
-            </li>
-            <li>
-              <a className="hover:text-white transition cursor-pointer">
-                About Me
-              </a>
-            </li>
+            {LinkNavItems.map((item) => (
+              <li key={item.name}>
+                <Link href={item.path}>
+                  <a
+                    className={`hover:text-white transition cursor-pointer ${
+                      router.pathname === item.path
+                        ? 'text-black dark:text-white font-bold'
+                        : ''
+                    }`}
+                  >
+                    {item.name}
+                  </a>
+                </Link>
+              </li>
+            ))}
           </ul>
 
           <DarkMode />

@@ -17,7 +17,7 @@ const twstyles = {
     'font-sfpro font-bold text-xl sm:text-2xl xl:text-3xl tracking-tighter lg:text-xl ',
   quotes: 'font-sfpro font-black text-xl xl:text-2xl tracking-tight lg:text-lg',
   button:
-    'bg-gradient-to-r from-indigo-500 via-purple-500 to-pink-500  p-1 inline-flex rounded-sm',
+    'bg-gradient-to-r from-indigo-500 via-purple-500 to-pink-500 hover:bg-gradient-to-l transition p-1 inline-flex rounded-md',
 };
 
 const Hero: NextPage = () => {
@@ -29,9 +29,9 @@ const Hero: NextPage = () => {
             <h1 className={twstyles.myName}>
               Hello, I’m <a className="text-tomato">Muhammad Vikri</a>
             </h1>
-            <h3 className={twstyles.subTitle}>
+            <h1 className={twstyles.subTitle}>
               Front-end Developer and Designer.
-            </h3>
+            </h1>
             <p className="py-3 font-sfpro text-base sm:text-lg xl:text-lg md:text-base">
               Hello! My name is Muhammad Vikri. I’m a student in Brawijaya
               University. I like to{' '}
@@ -43,7 +43,7 @@ const Hero: NextPage = () => {
               about technologies.
             </p>
             <button className={twstyles.button}>
-              <div className="dark:text-white dark:bg-black bg-white text-black transition py-2 px-6">
+              <div className="dark:text-white dark:bg-black bg-white text-black transition py-2 px-6 rounded-sm">
                 About Me
               </div>
             </button>
@@ -73,7 +73,7 @@ const Hero: NextPage = () => {
                 team work.
               </p>
             </div>
-            <button className=" dark:bg-white dark:text-black bg-black text-white transition py-3 px-6 inline-flex rounded-sm">
+            <button className=" dark:bg-white dark:text-black bg-black text-white hover:bg-white hover:text-black border-2 hover:border-black transition py-3 px-6 inline-flex rounded-md">
               Contact Me
             </button>
           </div>

@@ -1,13 +1,18 @@
-import type { NextPage } from 'next';
-import Hero from '../components/hero/Hero';
-import Project from '../components/project/Project';
-import Tools from '../components/tools/Tools';
+import { NextPage } from 'next';
+import Head from 'next/head';
+import React from 'react';
+import Hero from '../commons/components/hero/Hero';
+import ProjectComponent from '../commons/components/project/ProjectComponent';
+import Tools from '../commons/components/tools/Tools';
 
 const Home: NextPage = () => {
   return (
     <>
+      <Head>
+        <title>Home</title>
+      </Head>
       <Hero />
-      <Project />
+      <ProjectComponent />
       <Tools />
     </>
   );
