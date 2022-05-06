@@ -11,11 +11,11 @@ const ProjectItemsList = [
   },
   {
     id: 3,
-    title: 'Web Application',
+    title: 'Web Development',
     type: 'React JS',
   },
   {
-    id: 3,
+    id: 4,
     title: 'Mobile Application',
     type: 'React Native',
   },
