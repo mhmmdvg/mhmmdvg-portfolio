@@ -73,7 +73,7 @@ const Hero: NextPage = () => {
                 team work.
               </p>
             </div>
-            <button className=" dark:bg-white dark:text-black bg-black text-white hover:bg-white hover:text-black border-2 hover:border-black transition py-3 px-6 inline-flex rounded-md">
+            <button className=" dark:bg-white dark:text-black dark:hover:bg-black dark:hover:text-white dark:hover:border-white bg-black text-white hover:bg-white hover:text-black border-2 hover:border-black transition py-3 px-6 inline-flex rounded-md">
               Contact Me
             </button>
           </div>
