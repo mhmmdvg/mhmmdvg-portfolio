@@ -58,7 +58,7 @@ const Navbar: NextPage = () => {
               <li key={item.name}>
                 <Link href={item.path}>
                   <a
-                    className={`hover:text-white dark:hover:text-black transition cursor-pointer ${
+                    className={`hover:text-black dark:hover:text-white transition cursor-pointer ${
                       router.pathname === item.path
                         ? 'text-black dark:text-white font-bold'
                         : ''
