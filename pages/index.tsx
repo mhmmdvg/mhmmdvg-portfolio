@@ -9,7 +9,7 @@ const Home: NextPage = () => {
   return (
     <>
       <Head>
-        <title>Home</title>
+        <title>Mhmmdvg</title>
       </Head>
       <Hero />
       <ProjectComponent />

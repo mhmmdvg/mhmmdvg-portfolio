@@ -8,8 +8,8 @@ const twstyles = {
   container:
     'flex flex-wrap justify-center mt-10 px-3 sm:px-24 2xl:px-56 items-center content-center lg:justify-start ',
   title:
-    'font-sfpro text-3xl sm:text-4xl font-extrabold dark:text-white text-black lg:text-5xl',
-  grid: 'grid grid-cols-2 gap-6 py-8 lg:grid-cols-4 ',
+    'font-sfpro text-3xl sm:text-3xl font-bold dark:text-white text-black lg:text-5xl',
+  grid: 'grid grid-cols-2 gap-6 py-4 lg:grid-cols-4 ',
 };
 
 const Tools: NextPage = () => {
@@ -17,7 +17,12 @@ const Tools: NextPage = () => {
     <section className={twstyles.body}>
       <div className="container mx-auto">
         <div className={twstyles.container}>
-          <h1 className={twstyles.title}>Technologies & Tools</h1>
+          <div>
+            <h1 className={twstyles.title}>Technologies & Tools</h1>
+            <p className="py-4 text-black dark:text-white opacity-40">
+              This is technology & tools I’m used
+            </p>
+          </div>
           <div className={twstyles.grid}>
             {IconsTools.map((item) => (
               // <TechToolsItem key={item.name} {...item} />

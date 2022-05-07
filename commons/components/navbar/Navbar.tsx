@@ -7,9 +7,9 @@ import DarkMode from './DarkMode';
 const twstyles = {
   header: 'fixed w-full backdrop-blur-sm z-20',
   navContainer:
-    'h-16 xl:w-[68rem] xl:h-[80px] lg:h-[80px] mx-auto px-8 xl:px-0',
+    'h-16 xl:w-[68rem] xl:h-[80px] lg:h-[80px] container mx-auto px-8 xl:px-0',
   navbar: 'flex justify-between items-center h-full py-4 ',
-  line: 'mx-auto dark:border-[#383838] border-[#525252] xl:w-[70rem]',
+  line: 'mx-auto dark:border-[#383838] border-[#eaeaea] xl:w-[69rem]',
 };
 
 interface NavItemType {
@@ -40,20 +40,19 @@ const Navbar: NextPage = () => {
               xmlns="http://www.w3.org/2000/svg"
             >
               <path
-                d="M23.9019 3.5C25.0566 1.5 27.9434 1.5 29.0981 3.5L50.3157 40.25C51.4704 42.25 50.027 44.75 47.7176 44.75H5.28238C2.97298 44.75 1.5296 42.25 2.6843 40.25L23.9019 3.5Z"
-                // stroke="white"
+                d="M28.2321 4L49.4497 40.75C50.2195 42.0833 49.2572 43.75 47.7176 43.75H5.28238C3.74278 43.75 2.78053 42.0833 3.55033 40.75L24.7679 4C25.5378 2.66667 27.4623 2.66667 28.2321 4Z"
                 className="stroke-black dark:stroke-white transition duration-500"
-                strokeWidth="4"
+                strokeWidth="6"
               />
               <path
-                d="M44.9019 11.5C46.0566 9.5 48.9434 9.5 50.0981 11.5L74.7798 54.25C75.9345 56.25 74.4911 58.75 72.1817 58.75H22.8183C20.5089 58.75 19.0655 56.25 20.2202 54.25L44.9019 11.5Z"
+                d="M49.2321 12L73.9138 54.75C74.6836 56.0833 73.7213 57.75 72.1817 57.75H22.8183C21.2787 57.75 20.3164 56.0833 21.0862 54.75L45.7679 12C46.5378 10.6667 48.4623 10.6667 49.2321 12Z"
                 className="stroke-black dark:stroke-white transition duration-500"
-                strokeWidth="4"
+                strokeWidth="6"
               />
             </svg>
           </div>
-
-          <ul className="flex space-x-5 sm:space-x-12 font-sfpro text-sm xl:text-lg lg:text-lg text-[#494949] dark:text-[#494949]">
+          {/* xl:text-lg lg:text-lg font-sfpro */}
+          <ul className="flex space-x-5 sm:space-x-12 text-sm sm:text-base text-[#494949] dark:text-[#494949]">
             {LinkNavItems.map((item) => (
               <li key={item.name}>
                 <Link href={item.path}>

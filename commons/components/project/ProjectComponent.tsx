@@ -9,7 +9,7 @@ const ProjectComponent: NextPage = () => {
     <section className="dark:bg-black bg-white transition pt-2 sm:pt-16">
       <div className="container mx-auto">
         <div className="flex flex-wrap mt-10 px-3 lg:px-24 lg:items-end justify-center">
-          <div className="flex flex-row w-full px-28 items-center dark:text-white text-black transition sm:px-28 lg:px-0 lg:w-1/2 2xl:px-32">
+          <div className="flex flex-row w-full items-center dark:text-white text-black transition sm:px-28 lg:px-0 lg:w-1/2 2xl:px-32">
             <h1 className="font-sfpro font-extrabold text-9xl">3+</h1>
             <p className="px-5 font-sfpro">
               total project
@@ -32,13 +32,13 @@ const ProjectComponent: NextPage = () => {
             ))}
           </div>
         </div>
-      </div>
-      <div className="text-center lg:hidden">
-        <Link href="/project">
-          <a className="cursor-pointer text-lg font-sfpro">
-            See all projects →
-          </a>
-        </Link>
+        <div className="relative text-center z-20 lg:hidden">
+          <Link href="/project">
+            <a className="cursor-pointer text-lg font-sfpro">
+              See all projects →
+            </a>
+          </Link>
+        </div>
       </div>
     </section>
   );

@@ -12,7 +12,7 @@ interface ProjectListProps {
 const ProjectList: NextPage<ProjectListProps> = (props) => {
   const { image, tag, title, description } = props;
   return (
-    <div className="sm:min-h-[340px] pb-6 sm:pb-2 cursor-pointer flex flex-col h-full rounded-lg border dark:border-[#383838] border-[#525252]">
+    <div className="sm:min-h-[340px] pb-6 sm:pb-2 cursor-pointer flex flex-col h-full rounded-lg border dark:border-[#383838] border-[#eaeaea]">
       <div className="relative flex h-52 w-full">
         <Image
           className="object-cover rounded-t-lg"
@@ -30,7 +30,7 @@ const ProjectList: NextPage<ProjectListProps> = (props) => {
           ))}
         </div>
       </div>
-      <div className="p-3 flex flex-col">
+      <div className="px-4 py-2 flex flex-col">
         <h2 className="font-sfpro text-2xl font-semibold">{title}</h2>
         <p className="text-sm font-sans">{description}</p>
       </div>
