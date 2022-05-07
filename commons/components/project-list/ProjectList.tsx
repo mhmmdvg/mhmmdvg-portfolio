@@ -32,7 +32,9 @@ const ProjectList: NextPage<ProjectListProps> = (props) => {
       </div>
       <div className="px-4 py-2 flex flex-col">
         <h2 className="font-sfpro text-2xl font-semibold">{title}</h2>
-        <p className="text-sm font-sans">{description}</p>
+        <p className="text-sm font-sans opacity-75 py-2 tracking-wide">
+          {description}
+        </p>
       </div>
     </div>
   );
