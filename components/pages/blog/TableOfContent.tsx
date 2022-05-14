@@ -1,7 +1,7 @@
 import { NextPage } from 'next';
 import { useRouter } from 'next/router';
 import React from 'react';
-import { ToCHeadingProps } from '../../../type/mdx';
+import { ToCHeadingProps } from '../../../type/mdxType';
 
 type Props = {
   tableOfContent?: ToCHeadingProps[];
