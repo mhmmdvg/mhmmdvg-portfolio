@@ -95,7 +95,9 @@ const Post = ({ post }: { post: MDXPost }) => {
                 ),
                 a: (props) => <a {...props} className="text-blue-500" />,
                 p: (props) => <p {...props} className="font-sfpro text-lg" />,
-                ul: (props) => <ul {...props} className="list-disc my-2" />,
+                ul: (props) => (
+                  <ul {...props} className="my-2 px-4 list-disc" />
+                ),
                 Image,
               }}
             />
