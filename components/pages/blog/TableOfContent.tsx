@@ -12,7 +12,7 @@ const TableOfContent: NextPage<Props> = ({ tableOfContent }) => {
 
   return (
     <aside className="hidden md:flex flex-col">
-      <div className="h-screen sticky top-24">
+      <div className="h-screen sticky top-24 ml-2">
         <div
           className="text-sm mb-2 flex items-center space-x-2 cursor-pointer"
           onClick={() => router.push('/blog')}

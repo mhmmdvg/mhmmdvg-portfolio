@@ -83,7 +83,7 @@ const Post = ({ post }: { post: MDXPost }) => {
         <p className="pt-2 text-base">Muhammad Vikri · {day}</p>
 
         <div className="flex w-full font-sfpro space-x-8 mt-5 xl:px-0">
-          <article className="w-full sm:w-[75%]">
+          <article className="w-full  sm:w-[75%]">
             <MDXRemote
               {...post.source}
               components={{
@@ -95,6 +95,7 @@ const Post = ({ post }: { post: MDXPost }) => {
                 ),
                 a: (props) => <a {...props} className="text-blue-500" />,
                 p: (props) => <p {...props} className="font-sfpro text-lg" />,
+                ul: (props) => <ul {...props} className="list-disc my-2" />,
                 Image,
               }}
             />
