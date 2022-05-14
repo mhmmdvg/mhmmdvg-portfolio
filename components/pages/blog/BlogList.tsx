@@ -3,7 +3,7 @@ import React from 'react';
 import Project1 from '../../../public/project/project1.png';
 import dayjs from 'dayjs';
 import Link from 'next/link';
-import { PostMeta } from '../../../type/mdx';
+import { PostMeta } from '../../../type/mdxType';
 
 type ListProps = {
   posts: PostMeta[];
@@ -20,7 +20,7 @@ const BlogList = ({ posts }: ListProps) => {
                 Muhammad Vikri · {dayjs(item.date).format('MMM D, YYYY')}
               </p>
               <Link href={`/blog/${item.slug}`} passHref>
-                <h2 className="font-sfpro text-xl py-2 sm:text-3xl font-bold cursor-pointer hover:text-indigo-500 transition duration-200">
+                <h2 className="font-sfpro text-xl py-2 sm:text-2xl font-bold cursor-pointer hover:text-indigo-500 transition duration-200">
                   {item.title}
                 </h2>
               </Link>
@@ -28,11 +28,12 @@ const BlogList = ({ posts }: ListProps) => {
                 {item.description}
               </p>
             </div>
-            <div className="relative flex w-28 h-20 sm:w-44 sm:h-32 rounded-md bg-white self-center">
+            <div className="relative flex w-28 h-20 sm:w-44 sm:h-32 rounded-lg bg-white self-center">
               <Image
                 className="object-cover rounded-md"
-                src={Project1}
-                alt="post1"
+                src={item.thumbnailUrl}
+                alt={item.title}
+                layout="fill"
               />
             </div>
           </div>

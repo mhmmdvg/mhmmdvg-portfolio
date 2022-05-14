@@ -8,7 +8,7 @@ export interface PostMeta {
   slug: string;
   description: string;
   date: string;
-  thumbnailUrl?: string;
+  thumbnailUrl?: string | any;
   tags: string[];
 }
 

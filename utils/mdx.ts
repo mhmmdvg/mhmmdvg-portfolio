@@ -1,5 +1,5 @@
 import path from 'path';
-import { Post } from '../type/mdx';
+import { Post } from '../type/mdxType';
 import { readFileSync } from 'fs';
 import matter from 'gray-matter';
 import { sync } from 'glob';
@@ -39,6 +39,7 @@ export const getPostFromSlug = (slug: string): Post => {
       slug,
       title: data.title ?? slug,
       description: data.description,
+      thumbnailUrl: data.thumbnailUrl,
       date: data.date,
       tags: (data.tags ?? []).sort(),
     },

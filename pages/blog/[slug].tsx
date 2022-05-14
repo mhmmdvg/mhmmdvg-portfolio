@@ -3,7 +3,7 @@ import Head from 'next/head';
 import { getPostFromSlug, getSlugs } from '../../utils/mdx';
 import { serialize } from 'next-mdx-remote/serialize';
 import { MDXRemote, MDXRemoteSerializeResult } from 'next-mdx-remote';
-import { PostMeta, ToCHeadingProps } from '../../type/mdx';
+import { PostMeta, ToCHeadingProps } from '../../type/mdxType';
 import rehypeSlug from 'rehype-slug';
 import rehypeAutolinkHeadings from 'rehype-autolink-headings';
 import rehypePrism from 'rehype-prism-plus';
@@ -11,6 +11,7 @@ import dayjs from 'dayjs';
 import { useEffect, useState } from 'react';
 import remarkGfm from 'remark-gfm';
 import TableOfContent from '../../components/pages/blog/TableOfContent';
+import Image from 'next/image';
 
 type MDXPost = {
   source: MDXRemoteSerializeResult<Record<string, unknown>>;
@@ -94,6 +95,7 @@ const Post = ({ post }: { post: MDXPost }) => {
                 ),
                 a: (props) => <a {...props} className="text-blue-500" />,
                 p: (props) => <p {...props} className="font-sfpro text-lg" />,
+                Image,
               }}
             />
           </article>
