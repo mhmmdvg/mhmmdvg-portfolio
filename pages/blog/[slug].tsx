@@ -12,6 +12,7 @@ import { useEffect, useState } from 'react';
 import remarkGfm from 'remark-gfm';
 import TableOfContent from '../../components/pages/blog/TableOfContent';
 import Image from 'next/image';
+import { useRouter } from 'next/router';
 
 type MDXPost = {
   source: MDXRemoteSerializeResult<Record<string, unknown>>;
@@ -75,15 +76,23 @@ const Post = ({ post }: { post: MDXPost }) => {
     setTableContent(headingArr);
   }, [post.source]);
 
-  console.log(tableContent);
+  const router = useRouter();
 
   return (
     <>
       <Head>
         <title>{post.meta.title}</title>
       </Head>
-      <div className="min-h-[100vh] mx-auto px-5 flex flex-col pt-32 xl:w-[68rem] ">
-        <h1 className="font-sfpro font-black text-4xl">{post.meta.title}</h1>
+      <div className="min-h-[100vh] mx-auto px-5 flex flex-col pt-28 xl:w-[68rem] ">
+        <div
+          className=" sm:hidden text-sm mb-2 flex items-center space-x-2 cursor-pointer"
+          onClick={() => router.back()}
+        >
+          <a className="font-sfpro text-base">← Blog</a>
+        </div>
+        <h1 className="font-sfpro font-black text-3xl sm:text-4xl">
+          {post.meta.title}
+        </h1>
         <p className="pt-2 text-base">Muhammad Vikri · {day}</p>
 
         <div className="flex w-full font-sfpro space-x-8 mt-5 xl:px-0">

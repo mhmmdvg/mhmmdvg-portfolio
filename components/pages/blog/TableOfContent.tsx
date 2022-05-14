@@ -17,7 +17,6 @@ const TableOfContent: NextPage<Props> = ({ tableOfContent }) => {
           className="text-sm mb-2 flex items-center space-x-2 cursor-pointer"
           onClick={() => router.push('/blog')}
         >
-          {/* <a className="-mt-1">←</a> */}
           <a className="font-sfpro text-base">← Blog</a>
         </div>
         <h1 className="font-sfpro text-base font-bold">On This Page</h1>
