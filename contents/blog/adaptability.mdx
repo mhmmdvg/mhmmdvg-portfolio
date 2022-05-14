@@ -1,7 +1,7 @@
 ---
-title: Adaptability
+title: How Does SWR Work?
 date: '2022-03-02'
-description: Cara bagaimana aku beradaptasi untuk melakukan perubahan dihidupku untuk ke depannya.
+description: SWR is a great package from Zeit to help make it easier to fetch remote data with hooks. It is based on the stale-while-revalidate RFC.
 thumbnailUrl: '/javascript-functions-thumbnail.jpeg'
 tags: ['functions', 'javascript']
 ---
@@ -10,8 +10,6 @@ tags: ['functions', 'javascript']
 
 We will show how to use SWR, how to configure it globally, and a pattern I like to use which separates data fetching from data display.
 
-
-
 Code is available at: [https://github.com/leighhalliday/crime-mapping](https://github.com/leighhalliday/crime-mapping)
 
 ## An SWR Fetcher
@@ -19,7 +17,7 @@ Code is available at: [https://github.com/leighhalliday/crime-mapping](https://g
 The `useSWR` hook requires two things to make it work:
 
 ```js
-useSWR("/crimes/passion", fetcher);
+useSWR('/crimes/passion', fetcher);
 ```
 
 - A key: This is a little vague, but think it if as something that uniquely identifies the data you want to fetch... which for a RESTful API endpoint can be the URL.
@@ -44,12 +42,6 @@ export default function App() {
   );
 }
 ```
-<h1>Hello World!</h1>
-
-<pre><code class="hljs language-js"><span class="hljs-keyword">var</span> name = <span
-    class="hljs-string">"World"</span>;
-<span class="hljs-variable hljs-language">console</span>.<span class="hljs-title hljs-function">warn</span>(<span
-        class="hljs-string">"Hello, "</span> + name + <span class="hljs-string">"!"</span>)</code></pre>
 
 ## Separating Data From Display
 
@@ -79,7 +71,7 @@ After dealing with error states and lack of data (loading state), we are now rea
 ```jsx
 function Crimes() {
   const url =
-    "https://data.police.uk/api/crimes-street/all-crime?lat=52.629729&lng=-1.131592&date=2019-10";
+    'https://data.police.uk/api/crimes-street/all-crime?lat=52.629729&lng=-1.131592&date=2019-10';
   const { data, error } = useSWR(url);
 
   if (error) return <div>Error...</div>;
