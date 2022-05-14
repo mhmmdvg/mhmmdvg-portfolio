@@ -20,7 +20,7 @@ const TableOfContent: NextPage<Props> = ({ tableOfContent }) => {
           {/* <a className="-mt-1">←</a> */}
           <a className="font-sfpro text-base">← Blog</a>
         </div>
-        <h1 className="font-sfpro text-lg font-bold">Contents</h1>
+        <h1 className="font-sfpro text-base font-bold">On This Page</h1>
         <div className="mt-2 ml-2">
           {tableOfContent?.map((item) => (
             <p key={item.text}>

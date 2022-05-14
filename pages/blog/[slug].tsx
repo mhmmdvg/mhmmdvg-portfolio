@@ -35,7 +35,9 @@ export const getStaticProps: GetStaticProps = async ({ params }) => {
 };
 
 export const getStaticPaths: GetStaticPaths = async () => {
-  const paths = getSlugs().map((slug) => ({ params: { slug } }));
+  const paths = getSlugs().map((slug) => ({
+    params: { slug: slug.replace('.mdx', '') },
+  }));
 
   return { paths, fallback: false };
 };
@@ -73,6 +75,8 @@ const Post = ({ post }: { post: MDXPost }) => {
     setTableContent(headingArr);
   }, [post.source]);
 
+  console.log(tableContent);
+
   return (
     <>
       <Head>
@@ -91,6 +95,12 @@ const Post = ({ post }: { post: MDXPost }) => {
                   <h2
                     {...props}
                     className="text-2xl font-extrabold font-sfpro mt-5 mb-2"
+                  />
+                ),
+                h3: (props) => (
+                  <h3
+                    {...props}
+                    className="text-xl font-extrabold font-sfpro mt-5 mb-2"
                   />
                 ),
                 a: (props) => <a {...props} className="text-blue-500" />,
