@@ -1,6 +1,5 @@
 import Image from 'next/image';
 import React from 'react';
-import Project1 from '../../../public/project/project1.png';
 import dayjs from 'dayjs';
 import Link from 'next/link';
 import { PostMeta } from '../../../type/mdxType';
