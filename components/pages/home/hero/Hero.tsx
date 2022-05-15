@@ -8,9 +8,9 @@ import {
 } from 'react-icons/ai';
 
 const styles = {
-  hero: 'text-black dark:bg-black dark:text-white bg-white transition pt-20 sm:pt-28 justify-center',
+  hero: 'text-black dark:bg-black dark:text-white bg-white transition pt-20 sm:pt-24 justify-center',
   heroContainer:
-    'flex mx-auto flex-wrap mt-10 lg:px-24 2xl:px-56 items-center justify-center',
+    'flex flex-col lg:flex-row mx-auto w-full mt-10 lg:px-24 xl:px-36 2xl:px-56 lg:space-x-14 items-center justify-center',
   myName:
     'font-sfpro font-black text-2xl sm:text-3xl xl:text-4xl tracking-tight lg:text-2xl ',
   subTitle:
@@ -25,9 +25,13 @@ const Hero: NextPage = () => {
     <div className={styles.hero}>
       <div className="container mx-auto">
         <div className={styles.heroContainer}>
-          <div className="text-center w-full px-3 sm:w-3/4 xl:w-1/2 xl:pr-20 lg:w-1/2 lg:px-0 lg:text-left ">
+          {/* w-full px-3 sm:w-3/4 xl:w-1/2 xl:pr-0 lg:w-1/2 */}
+          <div className="text-center w-full lg:px-0 lg:text-left">
             <h1 className={styles.myName}>
-              Hello, I’m <a className="text-tomato">Muhammad Vikri</a>
+              Hello, I’m{' '}
+              <a className="font-extrabold text-transparent bg-clip-text bg-gradient-to-r from-purple-600 to-pink-600">
+                Muhammad Vikri
+              </a>
             </h1>
             <h1 className={styles.subTitle}>
               Front-end Developer and Designer.
@@ -60,7 +64,8 @@ const Hero: NextPage = () => {
             </div>
           </div>
 
-          <div className="text-center w-full px-3 pt-10 sm:px-10 sm:w-3/4 xl:w-1/2 xl:pl-20 lg:w-1/2 lg:text-left ">
+          {/* w-full px-3 pt-10 sm:px-10 sm:w-3/4 xl:w-1/2 xl:pl-0 lg:w-1/2 */}
+          <div className="text-center pt-8 px-3 sm:px-0 lg:text-left ">
             <h1 className={styles.quotes}>
               “There is some good in this world, and it’s worth fighting for”{' '}
               <a className="font-sfpro font-normal xl:text-lg tracking-wide md:text-sm">

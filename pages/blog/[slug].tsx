@@ -96,7 +96,7 @@ const Post = ({ post }: { post: MDXPost }) => {
         <p className="pt-2 text-base">Muhammad Vikri · {day}</p>
 
         <div className="flex w-full font-sfpro space-x-8 mt-5 xl:px-0">
-          <article className="w-full  sm:w-[75%]">
+          <article className="w-full sm:w-[75%]">
             <MDXRemote
               {...post.source}
               components={{

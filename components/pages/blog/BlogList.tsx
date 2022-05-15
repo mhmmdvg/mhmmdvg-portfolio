@@ -19,7 +19,7 @@ const BlogList = ({ posts }: ListProps) => {
                 Muhammad Vikri · {dayjs(item.date).format('MMM D, YYYY')}
               </p>
               <Link href={`/blog/${item.slug}`} passHref>
-                <h2 className="font-sfpro text-xl py-2 sm:text-2xl font-bold cursor-pointer hover:text-indigo-500 transition duration-200">
+                <h2 className="font-sfpro text-xl py-2 sm:text-2xl font-bold cursor-pointer hover:text-fuchsia-600 transition duration-200">
                   {item.title}
                 </h2>
               </Link>

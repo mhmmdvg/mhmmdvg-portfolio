@@ -21,9 +21,9 @@ const Blog = ({ posts }: { posts: PostMeta[] }) => {
         <title>Blog | Mhmmdvg</title>
       </Head>
 
-      <div className="dark:bg-black bg-white transition pt-20 sm:pt-20">
+      <div className="dark:bg-black bg-white transition pt-11 sm:pt-16">
         <div className="container mx-auto">
-          <div className="flex flex-wrap flex-col items-start mt-10 px-3 lg:px-24 2xl:px-60 sm:items-start sm:justify-start sm:w-full">
+          <div className="flex flex-wrap flex-col items-start mt-10 px-3 lg:px-32 2xl:px-60 sm:items-start sm:justify-start sm:w-full">
             <div className="mb-8">
               <h1 className="font-sfpro text-3xl sm:text-4xl font-bold dark:text-white text-black lg:text-4xl">
                 Blog

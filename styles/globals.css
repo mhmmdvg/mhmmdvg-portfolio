@@ -52,3 +52,14 @@ a {
 * {
   box-sizing: border-box;
 }
+
+::selection {
+  color: #fff;
+  background-color: rgb(192 38 211);
+}
+
+.transition-tes {
+  transition-property: all;
+  transition-timing-function: linear;
+  transition-duration: 150ms;
+}
