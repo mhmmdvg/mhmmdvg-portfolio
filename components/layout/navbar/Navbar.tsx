@@ -33,7 +33,7 @@ const Navbar: NextPage = () => {
   const pathNow = router.pathname.split('/')[1];
 
   const scrollShowBorder = () => {
-    if (window.scrollY >= 30) {
+    if (window.scrollY >= 10) {
       setShowBorder(true);
     } else {
       setShowBorder(false);
