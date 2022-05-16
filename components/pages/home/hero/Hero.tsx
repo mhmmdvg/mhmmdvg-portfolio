@@ -37,7 +37,7 @@ const Hero: NextPage = () => {
             <h1 className={styles.subTitle}>
               Front-end Developer and Designer.
             </h1>
-            <p className="py-3 font-text text-base sm:text-lg xl:text-base md:text-base">
+            <p className="py-3 font-text px-3 text-base sm:text-lg xl:text-base md:text-base">
               Hello! My name is Muhammad Vikri. I’m a student in Brawijaya
               University. I like to{' '}
               <a className="underline decoration-sky-500">design</a> and learn
