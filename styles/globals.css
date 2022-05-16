@@ -46,9 +46,3 @@ a {
   color: #fff;
   background-color: rgb(192 38 211);
 }
-
-.transition-tes {
-  transition-property: all;
-  transition-timing-function: linear;
-  transition-duration: 150ms;
-}
