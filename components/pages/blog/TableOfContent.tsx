@@ -11,16 +11,16 @@ const TableOfContent: NextPage<Props> = ({ tableOfContent }) => {
   const router = useRouter();
 
   return (
-    <aside className="hidden md:flex flex-col">
+    <aside className="hidden sm:flex w-full flex-col font-text">
       <div className="h-screen sticky top-24 ml-2">
         <div
           className="text-sm mb-2 flex items-center space-x-2 cursor-pointer"
           onClick={() => router.push('/blog')}
         >
-          <a className="font-text text-base">← Blog</a>
+          <a className="sm:text-sm md:text-base">← Blog</a>
         </div>
-        <h1 className="font-text text-base font-bold">On This Page</h1>
-        <div className="mt-2 ml-2">
+        <h1 className="sm:text-sm md:text-base font-bold">On This Page</h1>
+        <div className="mt-2 ml-2 sm:text-xs md:text-base tracking-tight">
           {tableOfContent?.map((item) => (
             <p key={item.text}>
               <a
