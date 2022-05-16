@@ -1,7 +1,7 @@
 import Document, {
   DocumentContext,
-  Html,
   Head,
+  Html,
   Main,
   NextScript,
 } from 'next/document';
@@ -9,13 +9,13 @@ import Document, {
 class MyDocument extends Document {
   static async getInitialProps(ctx: DocumentContext) {
     const initialProps = await Document.getInitialProps(ctx);
-
-    return initialProps;
+    return { ...initialProps };
   }
+
   render() {
     return (
       <Html lang="en">
-        <Head />
+        <Head></Head>
         <body className="bg-white text-black dark:bg-black dark:text-white transition">
           <Main />
           <NextScript />

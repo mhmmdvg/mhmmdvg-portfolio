@@ -18,6 +18,7 @@ const ProjectList: NextPage<ProjectListProps> = (props) => {
           className="object-cover rounded-t-lg"
           src={image}
           alt="project1"
+          property="true"
         />
         <div className="absolute flex space-x-2 flex-wrap inset-y-44 inset-x-3">
           {tag.map((item) => (
@@ -31,7 +32,7 @@ const ProjectList: NextPage<ProjectListProps> = (props) => {
         </div>
       </div>
       <div className="px-4 py-2 flex flex-col">
-        <h2 className="font-sfpro text-2xl font-semibold">{title}</h2>
+        <h2 className="font-display text-2xl font-semibold">{title}</h2>
         <p className="text-sm font-sans opacity-75 py-2 tracking-wide">
           {description}
         </p>

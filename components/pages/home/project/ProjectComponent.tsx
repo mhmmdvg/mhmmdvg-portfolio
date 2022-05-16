@@ -10,15 +10,15 @@ const ProjectComponent: NextPage = () => {
       <div className="container mx-auto">
         <div className="flex flex-wrap mt-10 px-3 lg:px-24 xl:px-36 lg:items-end justify-center">
           <div className="flex flex-row w-full items-center dark:text-white text-black transition sm:px-28 lg:px-0 lg:w-1/2 2xl:px-32">
-            <h1 className="font-sfpro font-extrabold text-9xl">3+</h1>
-            <p className="px-5 font-sfpro">
+            <h1 className="font-display font-extrabold text-9xl">3+</h1>
+            <p className="px-5 font-text">
               total project
               <br /> web and <br /> mobile
             </p>
           </div>
           <div className="hidden lg:w-1/2 lg:flex items-center dark:text-white text-black lg:justify-end sm:hidden 2xl:pr-32">
             <Link href="/project">
-              <a className="cursor-pointer font-sfpro">See all projects →</a>
+              <a className="cursor-pointer font-text">See all projects →</a>
             </Link>
           </div>
           <div className="text-white grid gap-4 py-5 grid-cols-2 lg:grid-cols-4 lg:gap-12 md:gap-4 xl:gap-4">
@@ -34,7 +34,7 @@ const ProjectComponent: NextPage = () => {
         </div>
         <div className="relative text-center z-10 lg:hidden">
           <Link href="/project">
-            <a className="cursor-pointer text-lg font-sfpro">
+            <a className="cursor-pointer text-lg font-text">
               See all projects →
             </a>
           </Link>

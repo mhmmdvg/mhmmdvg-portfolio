@@ -1,12 +1,29 @@
 /* PrismJS 1.28.0
 https://prismjs.com/download.html#themes=prism&languages=markup+css+clike+javascript */
+
+@font-face {
+  font-family: 'SF-Mono';
+  src: url(/fonts/SF-Mono/SFMonoBold.woff2) format('woff2');
+  font-weight: 700;
+}
+@font-face {
+  font-family: 'SF-Mono';
+  src: url(/fonts/SF-Mono/SFMonoSemibold.woff2) format('woff2');
+  font-weight: 600;
+}
+@font-face {
+  font-family: 'SF-Mono';
+  src: url(/fonts/SF-Mono/SFMonoRegular.woff2) format('woff2');
+}
+
 code[class*='language-'],
 pre[class*='language-'] {
-  color: #fff;
+  /* color: #fff; */
+  @apply dark:text-white text-black;
   background: 0 0;
   /* text-shadow: 0 1px rgba(0, 0, 0, 0.3); */
-  font-family: 'Fira Code', Monaco, 'Andale Mono', 'Ubuntu Mono', monospace;
-  font-size: 0.9em;
+  font-family: SF-Mono, Monaco, 'Andale Mono', 'Ubuntu Mono', monospace;
+  font-size: 1em;
   text-align: left;
   white-space: pre;
   word-spacing: normal;
@@ -31,7 +48,8 @@ pre[class*='language-'] {
 
 :not(pre) > code[class*='language-'],
 pre[class*='language-'] {
-  background: #1f1f24;
+  /* background: #1f1f24; */
+  @apply dark:bg-[#1f1f24] bg-gray-100 transition-all duration-300;
 }
 
 :not(pre) > code[class*='language-'] {
@@ -44,11 +62,13 @@ pre[class*='language-'] {
 .token.comment,
 .token.doctype,
 .token.prolog {
-  color: #6c7986;
+  /* color: #6c7986; */
+  @apply dark:text-[#6c7986] text-[#5d6c79];
 }
 
 .token.punctuation {
-  color: #fff;
+  /* color: #fff; */
+  @apply dark:text-white text-black;
 }
 
 .token.namespace {
@@ -65,7 +85,8 @@ pre[class*='language-'] {
 
 .token.boolean,
 .token.number {
-  color: #ae81ff;
+  /* color: #ae81ff; */
+  @apply dark:text-[#ae81ff] text-[#9e6cef];
 }
 
 .token.attr-name,
@@ -74,7 +95,8 @@ pre[class*='language-'] {
 .token.inserted,
 .token.selector,
 .token.string {
-  color: #fc6a5d;
+  /* color: #fc6a5d; */
+  @apply dark:text-[#fc6a5d] text-[#c41a16];
 }
 
 .language-css .token.string,
@@ -90,16 +112,17 @@ pre[class*='language-'] {
 .token.attr-value,
 .token.class-name,
 .token.function {
-  color: #93f1dd;
+  @apply dark:text-[#93f1dd] text-[#326d74];
 }
 
 .token.keyword {
-  color: #fc5fa3;
+  @apply dark:text-[#fc5fa3] text-[#9B2393];
 }
 
 .token.important,
 .token.regex {
-  color: #a167e6;
+  /* color: #a167e6; */
+  @apply dark:text-[#a167e6] text-[#6c36a9];
 }
 
 .token.bold,

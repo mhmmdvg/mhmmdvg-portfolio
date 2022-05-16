@@ -4,7 +4,7 @@ import { readFileSync } from 'fs';
 import matter from 'gray-matter';
 import { sync } from 'glob';
 
-const BLOG_PATH = path.join(process.cwd(), 'contents/blog');
+const BLOG_PATH = path.join(process.cwd(), 'commons/contents/blog');
 
 export const getSlugs = (): string[] => {
   const paths = sync(`${BLOG_PATH}/*.mdx`);

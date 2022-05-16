@@ -43,19 +43,6 @@ export const getStaticPaths: GetStaticPaths = async () => {
   return { paths, fallback: false };
 };
 
-const twstyles = {
-  body: 'text-black dark:bg-black dark:text-white bg-white transition pt-20 sm:pt-28 justify-center',
-  heroContainer:
-    'flex mx-auto flex-wrap mt-10 lg:px-24 2xl:px-56 items-center justify-center',
-  myName:
-    'font-sfpro font-black text-2xl sm:text-3xl xl:text-4xl tracking-tight lg:text-2xl ',
-  subTitle:
-    'font-sfpro font-bold text-xl sm:text-2xl xl:text-3xl tracking-tighter lg:text-xl ',
-  quotes: 'font-sfpro font-black text-xl xl:text-2xl tracking-tight lg:text-lg',
-  button:
-    'bg-gradient-to-r from-indigo-500 via-purple-500 to-pink-500 hover:bg-gradient-to-l transition p-1 inline-flex rounded-md',
-};
-
 const Post = ({ post }: { post: MDXPost }) => {
   const day = dayjs(post.meta.date).format('MMM D, YYYY');
 
@@ -88,14 +75,14 @@ const Post = ({ post }: { post: MDXPost }) => {
           className=" sm:hidden text-sm mb-2 flex items-center space-x-2 cursor-pointer"
           onClick={() => router.back()}
         >
-          <a className="font-sfpro text-base">← Blog</a>
+          <a className="font-text text-base">← Blog</a>
         </div>
-        <h1 className="font-sfpro font-black text-3xl sm:text-4xl">
+        <h1 className="font-display font-extrabold text-3xl sm:text-4xl">
           {post.meta.title}
         </h1>
-        <p className="pt-2 text-base">Muhammad Vikri · {day}</p>
+        <p className="pt-2 font-text text-base">Muhammad Vikri · {day}</p>
 
-        <div className="flex w-full font-sfpro space-x-8 mt-5 xl:px-0">
+        <div className="flex w-full font-text font-normal text-base space-x-8 mt-5 xl:px-0">
           <article className="w-full sm:w-[75%]">
             <MDXRemote
               {...post.source}
@@ -103,17 +90,22 @@ const Post = ({ post }: { post: MDXPost }) => {
                 h2: (props) => (
                   <h2
                     {...props}
-                    className="text-2xl font-extrabold font-sfpro mt-5 mb-2"
+                    className="text-2xl font-bold font-text mt-5 mb-2"
                   />
                 ),
                 h3: (props) => (
                   <h3
                     {...props}
-                    className="text-xl font-extrabold font-sfpro mt-5 mb-2"
+                    className="text-xl font-bold font-text mt-5 mb-2"
                   />
                 ),
                 a: (props) => <a {...props} className="text-blue-500" />,
-                p: (props) => <p {...props} className="font-sfpro text-lg" />,
+                p: (props) => (
+                  <p
+                    {...props}
+                    className="font-text text-base tracking-normal"
+                  />
+                ),
                 ul: (props) => (
                   <ul {...props} className="my-2 px-4 list-disc" />
                 ),

@@ -22,9 +22,7 @@ const TechToolsItem: NextPage<ToolsItemProps> = (props) => {
           alt={alt}
         /> */}
         {icons}
-        <p className="font-sfpro hidden md:flex md:text-xl font-normal">
-          {name}
-        </p>
+        <p className="font-text hidden md:flex md:text-base">{name}</p>
       </div>
     </div>
   );

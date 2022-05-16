@@ -12,10 +12,11 @@ const styles = {
   heroContainer:
     'flex flex-col lg:flex-row mx-auto w-full mt-10 lg:px-24 xl:px-36 2xl:px-56 lg:space-x-14 items-center justify-center',
   myName:
-    'font-sfpro font-black text-2xl sm:text-3xl xl:text-4xl tracking-tight lg:text-2xl ',
+    'font-display font-black text-2xl sm:text-3xl xl:text-4xl tracking-tight lg:text-2xl ',
   subTitle:
-    'font-sfpro font-bold text-xl sm:text-2xl xl:text-3xl tracking-tighter lg:text-xl ',
-  quotes: 'font-sfpro font-black text-xl xl:text-2xl tracking-tight lg:text-lg',
+    'font-display font-bold text-xl sm:text-2xl xl:text-3xl tracking-tighter lg:text-xl ',
+  quotes:
+    'font-display font-bold text-xl xl:text-2xl tracking-tight lg:text-lg',
   button:
     'bg-gradient-to-r from-indigo-500 via-purple-500 to-pink-500 hover:bg-gradient-to-l transition p-1 inline-flex rounded-md',
 };
@@ -36,7 +37,7 @@ const Hero: NextPage = () => {
             <h1 className={styles.subTitle}>
               Front-end Developer and Designer.
             </h1>
-            <p className="py-3 font-sfpro text-base sm:text-lg xl:text-lg md:text-base">
+            <p className="py-3 font-text text-base sm:text-lg xl:text-base md:text-base">
               Hello! My name is Muhammad Vikri. I’m a student in Brawijaya
               University. I like to{' '}
               <a className="underline decoration-sky-500">design</a> and learn
@@ -68,12 +69,12 @@ const Hero: NextPage = () => {
           <div className="text-center pt-8 px-3 sm:px-0 lg:text-left ">
             <h1 className={styles.quotes}>
               “There is some good in this world, and it’s worth fighting for”{' '}
-              <a className="font-sfpro font-normal xl:text-lg tracking-wide md:text-sm">
+              <a className="font-text font-normal xl:text-base tracking-wide md:text-sm">
                 - J.R.R. Tolkien
               </a>
             </h1>
-            <div className="xl:pr-32 py-4">
-              <p className="font-sfpro font-normal xl:text-lg lg:text-lg md:text-lg">
+            <div className="py-4">
+              <p className="font-text xl:text-lg lg:text-lg md:text-lg">
                 I will help you to make web or mobile application, I have good
                 team work.
               </p>
