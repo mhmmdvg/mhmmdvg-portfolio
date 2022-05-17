@@ -20,7 +20,7 @@ const Project: NextPage = () => {
         <title>Projects | Mhmmdvg</title>
       </Head>
 
-      <div className={twstyles.body}>
+      <section className={twstyles.body}>
         <div className="container mx-auto">
           <div className={twstyles.container}>
             <h1 className={twstyles.title}>Projects</h1>
@@ -38,7 +38,7 @@ const Project: NextPage = () => {
             </div>
           </div>
         </div>
-      </div>
+      </section>
     </>
   );
 };

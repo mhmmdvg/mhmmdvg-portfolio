@@ -6,6 +6,7 @@ import {
   AiOutlineGithub,
   AiFillMediumSquare,
 } from 'react-icons/ai';
+import M from '../../../svg/M';
 
 const styles = {
   hero: 'text-black dark:bg-black dark:text-white bg-white transition pt-20 sm:pt-24 justify-center',
@@ -37,6 +38,7 @@ const Hero: NextPage = () => {
             <h1 className={styles.subTitle}>
               Front-end Developer and Designer.
             </h1>
+            {/* <M /> */}
             <p className="py-3 font-text px-3 text-base sm:px-0 sm:text-lg xl:text-base md:text-base">
               Hello! My name is Muhammad Vikri. I’m a student in Brawijaya
               University. I like to{' '}
