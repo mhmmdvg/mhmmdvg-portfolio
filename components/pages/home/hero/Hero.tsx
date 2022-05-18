@@ -19,7 +19,7 @@ const styles = {
   quotes:
     'font-display font-bold text-xl xl:text-2xl tracking-tight lg:text-lg',
   button:
-    'bg-gradient-to-r from-indigo-500 via-purple-500 to-pink-500 hover:bg-gradient-to-l transition p-1 inline-flex rounded-md',
+    'p-1 duration-500 inline-flex rounded-md bg-gradient-to-tl from-indigo-500 via-purple-500 to-pink-500 transition-all bg-size-200 bg-pos-0 hover:bg-pos-100',
 };
 
 const Hero: NextPage = () => {

@@ -12,7 +12,7 @@ const ProjectItem: NextPage<ProjectItemsProps> = ({ title, type, num }) => {
   // const { title, type, num } = props;
   // from-indigo-500 via-purple-500 to-pink-500
   return (
-    <div className="w-44 h-44 relative bg-gradient-to-r from-indigo-500 via-purple-500 to-pink-500 md:w-64 md:h-64 lg:w-52 lg:h-52 xl:w-60 xl:h-60">
+    <div className="w-44 h-44 relative bg-gradient-to-tl from-indigo-500 via-purple-500 to-pink-500 md:w-64 md:h-64 lg:w-52 lg:h-52 xl:w-60 xl:h-60">
       <div className="flex flex-col items-end">
         <h1 className="font-display font-extrabold text-[9.8rem] md:text-[14.3rem] xl:text-[13.4rem] opacity-40 lg:text-[11.7rem]">
           {num}
