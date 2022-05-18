@@ -34,9 +34,10 @@ const Hero: NextPage = () => {
             <div className="text-center w-full lg:px-0 lg:text-left">
               <h1 className={styles.myName}>
                 Hello, I’m{' '}
-                <a className="font-extrabold text-transparent bg-clip-text bg-gradient-to-r from-purple-600 to-pink-600">
+                {/* transition-all bg-size-200 bg-pos-0 hover:bg-pos-100 duration-300 */}
+                <span className="font-extrabold text-transparent bg-clip-text bg-gradient-to-r from-purple-600 to-pink-600 ">
                   Muhammad Vikri
-                </a>
+                </span>
               </h1>
               <h1 className={styles.subTitle}>
                 Front-end Developer and Designer.
