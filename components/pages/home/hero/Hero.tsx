@@ -46,13 +46,15 @@ const Hero: NextPage = () => {
               <p className="py-3 font-text px-3 text-base sm:px-0 sm:text-lg xl:text-base md:text-base">
                 Hello! My name is Muhammad Vikri. I’m a student in Brawijaya
                 University. I like to{' '}
-                <a className="underline decoration-sky-500">design</a> and learn
-                about{' '}
-                <a className="underline decoration-indigo-500">programming</a>.
-                I would like to{' '}
-                <a className="underline decoration-pink-500">
+                <span className="underline decoration-sky-500">design</span> and
+                learn about{' '}
+                <span className="underline decoration-indigo-500">
+                  programming
+                </span>
+                . I would like to{' '}
+                <span className="underline decoration-pink-500">
                   learn new things
-                </a>{' '}
+                </span>{' '}
                 about technologies.
               </p>
               <button className={styles.button}>

@@ -5,7 +5,7 @@ import IconsTools from './listIcons';
 import useLoaded from '../../../../hooks/use-loading';
 
 const twstyles = {
-  body: 'dark:bg-black bg-white transition pt-2 sm:pt-16',
+  body: 'dark:bg-black transition bg-white pt-2 sm:pt-16',
   container:
     'flex flex-wrap justify-center mt-10 px-3 sm:px-24 xl:px-36 2xl:px-56 items-center content-center lg:justify-start ',
   title:
@@ -17,8 +17,8 @@ const Tools: NextPage = () => {
   const isLoaded = useLoaded();
 
   return (
-    <section className={`${(twstyles.body, isLoaded && 'fade-in-start')}`}>
-      <div className="container mx-auto" data-fade="3">
+    <section className={twstyles.body}>
+      <div className="container mx-auto">
         <div className={twstyles.container}>
           <div>
             <h1 className={twstyles.title}>Technologies & Tools</h1>
