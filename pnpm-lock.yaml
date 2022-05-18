@@ -12,6 +12,7 @@ specifiers:
   '@types/react-dom': 18.0.3
   '@types/react-syntax-highlighter': ^15.5.1
   autoprefixer: ^10.4.7
+  clsx: ^1.1.1
   dayjs: ^1.11.2
   esbuild: ^0.14.38
   eslint: 8.14.0
@@ -45,6 +46,7 @@ dependencies:
   '@mdx-js/loader': 2.1.1_webpack@5.72.1
   '@mdx-js/react': 2.1.1_react@18.1.0
   '@next/mdx': 12.1.6_9548f622ac026268a1157fce0ec38610
+  clsx: 1.1.1
   dayjs: 1.11.2
   esbuild: 0.14.38
   framer-motion: 6.3.3_react-dom@18.1.0+react@18.1.0
@@ -1191,6 +1193,11 @@ packages:
     resolution: {integrity: sha1-0dyXOSAxTfZ/vrlCI7TuNQI56Ws=}
     dependencies:
       mimic-response: 1.0.1
+    dev: false
+
+  /clsx/1.1.1:
+    resolution: {integrity: sha512-6/bPho624p3S2pMyvP5kKBPXnI3ufHLObBFCfgx+LkeR5lg2XYy2hqZqUf45ypD8COn2bhgGJSUE+l5dhNBieA==}
+    engines: {node: '>=6'}
     dev: false
 
   /color-convert/1.9.3:

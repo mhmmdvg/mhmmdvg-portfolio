@@ -2,12 +2,19 @@ import { NextPage } from 'next';
 import Link from 'next/link';
 import React from 'react';
 import ProjectItemsList from '../../../../commons/constants/projectItemsList';
+import useLoaded from '../../../../hooks/use-loading';
 import ProjectItem from './ProjectItem';
 
 const ProjectComponent: NextPage = () => {
+  const isLoaded = useLoaded();
+
   return (
-    <section className="dark:bg-black bg-white transition pt-2 sm:pt-16">
-      <div className="container mx-auto">
+    <section
+      className={`dark:bg-black bg-white transition pt-2 sm:pt-16 ${
+        isLoaded && 'fade-in-start'
+      }`}
+    >
+      <div className="container mx-auto" data-fade="2">
         <div className="flex flex-wrap mt-10 px-3 lg:px-24 xl:px-36 lg:items-end justify-center">
           <div className="flex flex-row w-full items-center dark:text-white text-black transition sm:px-28 lg:px-0 lg:w-1/2 2xl:px-32">
             <h1 className="font-display font-extrabold text-9xl">3+</h1>

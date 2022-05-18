@@ -7,12 +7,13 @@ import { PostMeta, ToCHeadingProps } from '../../type/mdxType';
 import rehypeSlug from 'rehype-slug';
 import rehypeAutolinkHeadings from 'rehype-autolink-headings';
 import rehypePrism from 'rehype-prism-plus';
-import dayjs from 'dayjs';
 import { useEffect, useState } from 'react';
 import remarkGfm from 'remark-gfm';
 import TableOfContent from '../../components/pages/blog/TableOfContent';
 import Image from 'next/image';
 import { useRouter } from 'next/router';
+import useLoaded from '../../hooks/use-loading';
+import HeaderPost from '../../components/pages/blog/HeaderPost';
 
 type MDXPost = {
   source: MDXRemoteSerializeResult<Record<string, unknown>>;
@@ -44,7 +45,7 @@ export const getStaticPaths: GetStaticPaths = async () => {
 };
 
 const Post = ({ post }: { post: MDXPost }) => {
-  const day = dayjs(post.meta.date).format('MMM D, YYYY');
+  const isLoaded = useLoaded();
 
   const [tableContent, setTableContent] = useState<ToCHeadingProps[]>();
 
@@ -70,19 +71,33 @@ const Post = ({ post }: { post: MDXPost }) => {
       <Head>
         <title>{post.meta.title}</title>
       </Head>
-      <div className="min-h-[100vh] mx-auto px-5 flex flex-col pt-28 xl:w-[68rem] ">
+      <section
+        className={`min-h-[100vh] mx-auto px-5 flex flex-col pt-28 xl:w-[68rem] ${
+          isLoaded && 'fade-in-start'
+        }`}
+      >
         <div
-          className=" sm:hidden text-sm mb-2 flex items-center space-x-2 cursor-pointer"
+          data-fade="1"
+          className="sm:hidden text-sm mb-2 flex items-center space-x-2 cursor-pointer"
           onClick={() => router.back()}
         >
           <a className="font-text text-base">← Blog</a>
         </div>
-        <h1 className="font-display font-extrabold text-3xl sm:text-4xl">
+
+        <HeaderPost post={post.meta} />
+
+        {/* <h1
+          data-fade="1"
+          className="font-display font-extrabold text-3xl sm:text-4xl"
+        >
           {post.meta.title}
         </h1>
-        <p className="pt-2 font-text text-base">Muhammad Vikri · {day}</p>
+        <p className="pt-2 font-text text-base">Muhammad Vikri · {day}</p> */}
 
-        <div className="flex w-full font-text font-normal text-base space-x-8 mt-5 xl:px-0">
+        <div
+          data-fade="2"
+          className="flex w-full font-text font-normal text-base space-x-8 mt-5 xl:px-0"
+        >
           <article className="w-full sm:w-[75%]">
             <MDXRemote
               {...post.source}
@@ -115,7 +130,7 @@ const Post = ({ post }: { post: MDXPost }) => {
           </article>
           <TableOfContent tableOfContent={tableContent} />
         </div>
-      </div>
+      </section>
     </>
   );
 };

@@ -3,6 +3,7 @@ import React from 'react';
 import BlogList from '../../components/pages/blog/BlogList';
 import { getAllPost } from '../../utils/mdx';
 import { PostMeta } from '../../type/mdxType';
+import useLoaded from '../../hooks/use-loading';
 
 export async function getStaticProps() {
   const posts = getAllPost().map((post) => post.meta);
@@ -15,26 +16,37 @@ export async function getStaticProps() {
 }
 
 const Blog = ({ posts }: { posts: PostMeta[] }) => {
+  const isLoaded = useLoaded();
+
   return (
     <>
       <Head>
         <title>Blog | Mhmmdvg</title>
       </Head>
 
-      <div className="dark:bg-black bg-white transition pt-11 font-text sm:pt-16">
+      <section
+        className={`dark:bg-black bg-white transition pt-11 font-text sm:pt-16 ${
+          isLoaded && 'fade-in-start'
+        }`}
+      >
         <div className="container mx-auto">
           <div className="flex flex-wrap flex-col items-start mt-10 px-3 lg:px-32 2xl:px-60 sm:items-start sm:justify-start sm:w-full">
             <div className="mb-8">
-              <h1 className="font-display text-3xl sm:text-4xl font-bold dark:text-white text-black lg:text-4xl">
+              <h1
+                data-fade="1"
+                className="font-display text-3xl sm:text-4xl font-bold dark:text-white text-black lg:text-4xl"
+              >
                 Blog
               </h1>
-              <p className="py-2">I love post anything in here</p>
+              <p data-fade="2" className="py-2">
+                I love post anything in here
+              </p>
             </div>
 
             <BlogList posts={posts} />
           </div>
         </div>
-      </div>
+      </section>
     </>
   );
 };

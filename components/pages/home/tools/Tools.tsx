@@ -2,6 +2,7 @@ import { NextPage } from 'next';
 import React from 'react';
 import TechToolsItem from './TechToolsItem';
 import IconsTools from './listIcons';
+import useLoaded from '../../../../hooks/use-loading';
 
 const twstyles = {
   body: 'dark:bg-black bg-white transition pt-2 sm:pt-16',
@@ -13,9 +14,11 @@ const twstyles = {
 };
 
 const Tools: NextPage = () => {
+  const isLoaded = useLoaded();
+
   return (
-    <section className={twstyles.body}>
-      <div className="container mx-auto">
+    <section className={`${(twstyles.body, isLoaded && 'fade-in-start')}`}>
+      <div className="container mx-auto" data-fade="3">
         <div className={twstyles.container}>
           <div>
             <h1 className={twstyles.title}>Technologies & Tools</h1>

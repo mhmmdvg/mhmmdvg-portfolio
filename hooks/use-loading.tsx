@@ -1,21 +1,19 @@
 import { useEffect, useState } from 'react';
 import { usePreloadingState } from '../context/PreLoading';
 
-const useLoading = () => {
-  const preLoading = usePreloadingState();
-  const [loading, setLoading] = useState(false);
+export default function useLoaded() {
+  const preloaded = usePreloadingState();
+  const [isLoaded, setIsLoaded] = useState<boolean>(false);
 
   useEffect(() => {
-    if (preLoading) {
-      setLoading(true);
+    if (preloaded) {
+      setIsLoaded(true);
     } else {
       setTimeout(() => {
-        setLoading(true);
+        setIsLoaded(true);
       }, 200);
     }
-  }, [preLoading]);
+  }, [preloaded]);
 
-  return loading;
-};
-
-export default useLoading;
+  return isLoaded;
+}

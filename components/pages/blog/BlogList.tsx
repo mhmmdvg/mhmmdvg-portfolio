@@ -3,6 +3,7 @@ import React from 'react';
 import dayjs from 'dayjs';
 import Link from 'next/link';
 import { PostMeta } from '../../../type/mdxType';
+import useLoaded from '../../../hooks/use-loading';
 
 type ListProps = {
   posts: PostMeta[];
@@ -12,7 +13,7 @@ const BlogList = ({ posts }: ListProps) => {
   return (
     <>
       {posts.map((item) => (
-        <div key={item.slug}>
+        <div key={item.slug} data-fade="3">
           <div className="flex w-full flex-row">
             <div className="flex flex-col w-full pr-4 sm:pr-10">
               <p className="font-text text-sm opacity-90">
@@ -36,7 +37,10 @@ const BlogList = ({ posts }: ListProps) => {
               />
             </div>
           </div>
-          <hr className="mx-auto my-6 dark:border-[#383838] border-[#eaeaea] xl:w-[68rem]" />
+          <hr
+            data-fade="4"
+            className="mx-auto my-6 dark:border-[#383838] border-[#eaeaea] xl:w-[68rem]"
+          />
         </div>
       ))}
     </>

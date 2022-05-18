@@ -10,32 +10,20 @@ interface PreloadingProps {
 }
 
 export const PreLoading: NextPage<PreloadingProps> = ({ children }) => {
-  const [isShowing, setIsShowing] = useState(false);
+  const [isShowing, setIsShowing] = useState<boolean>(false);
 
   useEffect(() => {
     setTimeout(() => {
       setIsShowing(true);
     }, 200);
-  });
+  }, []);
 
   return (
     <PreloadingContext.Provider value={isShowing}>
-      <div className="flex flex-col items-center py-16">
-        <div className="h-32 w-32">
-          <Transition
-            as={Fragment}
-            show={isShowing}
-            enter="transform transition duration-[400ms]"
-            enterFrom="opacity-0 rotate-[-120deg] scale-50"
-            enterTo="opacity-100 rotate-0 scale-100"
-            leave="transform duration-200 transition ease-in-out"
-            leaveFrom="opacity-100 rotate-0 scale-100 "
-            leaveTo="opacity-0 scale-95 "
-          >
-            <div className="h-full w-full rounded-md bg-white shadow-lg" />
-          </Transition>
-        </div>
-      </div>
+      <div
+        className={`flex fixed inset-0 justify-center items-center bg-white transition-opacity dark:bg-dark
+          ${isShowing} && opacity-0 pointer-events-none`}
+      />
       {children}
     </PreloadingContext.Provider>
   );
