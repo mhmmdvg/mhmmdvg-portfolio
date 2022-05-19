@@ -77,7 +77,7 @@ const Hero = () => {
                       >
                         <div
                           onClick={() => window.open(item.link, '_blank')}
-                          className="text-5xl cursor-ne-resize"
+                          className="text-5xl cursor-ne-resize hover:text-purple-500"
                         >
                           {item.icon}
                         </div>
@@ -122,7 +122,7 @@ const Hero = () => {
                   >
                     <div
                       onClick={() => window.open(item.link, '_blank')}
-                      className="text-5xl cursor-ne-resize"
+                      className="text-5xl cursor-ne-resize hover:text-purple-500 transition"
                     >
                       {item.icon}
                     </div>

@@ -6,27 +6,23 @@ import TooltipCustom from '../../tooltip/Tooltip-custom';
 
 const Socmed: NextPage = () => {
   return (
-    <footer className="dark:bg-black bg-white transition pt-10 pb-10 sm:pb-10 flex">
-      <div className="container mx-auto">
-        <div className="mt-0 w-56 md:w-fit mx-auto dark:text-white text-black sm:mt-10">
-          <div className="flex flex-row space-x-5 dark:bg-[#141414] bg-gray-200 py-2 px-3 md:py-3 md:px-14 rounded-2xl ">
-            {socialMedia.map((item) => (
-              <CustomTooltip
-                key={item.name}
-                position="top"
-                html={<TooltipCustom type={item.name} />}
-                interactive
-              >
-                <div
-                  onClick={() => window.open(item.link, '_blank')}
-                  className="text-5xl cursor-ne-resize"
-                >
-                  {item.icon}
-                </div>
-              </CustomTooltip>
-            ))}
-          </div>
-        </div>
+    <footer className="dark:bg-black bg-white transition mt-24 mb-10">
+      <div className="min-w-[180px] sm:min-w-[280px] mx-auto h-[72px] w-fit flex dark:bg-[#141414] dark:text-white bg-gray-200 space-x-6 sm:space-x-8 text-black items-center rounded-2xl px-6 sm:px-10 transition">
+        {socialMedia.map((item) => (
+          <CustomTooltip
+            key={item.name}
+            position="top"
+            html={<TooltipCustom type={item.name} />}
+            interactive
+          >
+            <div
+              onClick={() => window.open(item.link, '_blank')}
+              className="text-4xl sm:text-5xl cursor-ne-resize hover:text-purple-500 transition"
+            >
+              {item.icon}
+            </div>
+          </CustomTooltip>
+        ))}
       </div>
     </footer>
   );
