@@ -1,4 +1,3 @@
-import { NextPage } from 'next';
 import React from 'react';
 import {
   AiOutlineInstagram,
@@ -6,12 +5,15 @@ import {
   AiOutlineGithub,
   AiFillMediumSquare,
 } from 'react-icons/ai';
+import { socialMedia } from '../../../../commons/constants/social-media';
 import useLoaded from '../../../../hooks/use-loading';
+import CustomTooltip from '../../../tooltip/custom-tooltip';
+import TooltipCustom from '../../../tooltip/Tooltip-custom';
 
 const styles = {
-  hero: 'text-black dark:bg-black dark:text-white bg-white transition pt-20 sm:pt-24 justify-center',
+  hero: 'text-black dark:bg-black dark:text-white bg-white transition pt-20 sm:pt-28 justify-center',
   heroContainer:
-    'flex flex-col lg:flex-row mx-auto w-full mt-10 lg:px-24 xl:px-36 2xl:px-56 lg:space-x-14 items-center justify-center',
+    'flex flex-col lg:flex-row mx-auto w-full lg:px-24 xl:px-36 2xl:px-56 lg:space-x-14 items-center justify-center',
   myName:
     'font-display font-black text-2xl sm:text-3xl xl:text-4xl tracking-tight lg:text-2xl ',
   subTitle:
@@ -22,7 +24,7 @@ const styles = {
     'p-1 duration-500 inline-flex rounded-md bg-gradient-to-tl from-indigo-500 via-purple-500 to-pink-500 transition-all bg-size-200 bg-pos-0 hover:bg-pos-100',
 };
 
-const Hero: NextPage = () => {
+const Hero = () => {
   const isLoaded = useLoaded();
 
   return (
@@ -58,18 +60,29 @@ const Hero: NextPage = () => {
                 about technologies.
               </p>
               <button className={styles.button}>
-                <div className="dark:text-white dark:bg-black bg-white text-black transition py-2 px-6 rounded-sm">
-                  About Me
+                <div className="dark:text-white dark:bg-black bg-white text-black transition py-3 px-5 rounded-sm">
+                  Contact Me
                 </div>
               </button>
 
               <div className="container mx-auto lg:hidden flex">
                 <div className="lg:w-96 mx-auto dark:text-white text-black transition mt-10">
                   <div className="flex flex-row space-x-8 lg:py-3 lg:px-12 rounded-2xl">
-                    <AiOutlineInstagram className="w-14 h-14" />
-                    <AiFillLinkedin className="w-14 h-14" />
-                    <AiOutlineGithub className="w-14 h-14" />
-                    <AiFillMediumSquare className="w-14 h-14" />
+                    {socialMedia.map((item) => (
+                      <CustomTooltip
+                        key={item.name}
+                        position="top"
+                        html={<TooltipCustom type={item.name} />}
+                        interactive
+                      >
+                        <div
+                          onClick={() => window.open(item.link, '_blank')}
+                          className="text-5xl cursor-ne-resize"
+                        >
+                          {item.icon}
+                        </div>
+                      </CustomTooltip>
+                    ))}
                   </div>
                 </div>
               </div>
@@ -89,9 +102,33 @@ const Hero: NextPage = () => {
                   team work.
                 </p>
               </div>
-              <button className=" dark:bg-white dark:text-black dark:hover:bg-black dark:hover:text-white dark:hover:border-white bg-black text-white hover:bg-white hover:text-black border-2 hover:border-black transition py-3 px-6 inline-flex rounded-md">
+              {/* <button className=" dark:bg-white dark:text-black dark:hover:bg-black dark:hover:text-white dark:hover:border-white bg-black text-white hover:bg-white hover:text-black border-2 hover:border-black transition py-3 px-6 inline-flex rounded-md">
                 Contact Me
-              </button>
+              </button> */}
+
+              <div className="hidden sm:flex flex-row space-x-6 my-4 rounded-2xl">
+                {/* <AiOutlineInstagram className="w-14 h-14" />
+                <AiFillLinkedin className="w-14 h-14" />
+                <AiOutlineGithub className="w-14 h-14" />
+                <AiFillMediumSquare className="w-14 h-14" /> */}
+                {/* {socialMedia.map((item) => ())} */}
+
+                {socialMedia.map((item) => (
+                  <CustomTooltip
+                    key={item.name}
+                    position="bottom"
+                    html={<TooltipCustom type={item.name} />}
+                    interactive
+                  >
+                    <div
+                      onClick={() => window.open(item.link, '_blank')}
+                      className="text-5xl cursor-ne-resize"
+                    >
+                      {item.icon}
+                    </div>
+                  </CustomTooltip>
+                ))}
+              </div>
             </div>
           </div>
         </div>

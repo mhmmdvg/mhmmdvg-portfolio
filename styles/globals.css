@@ -26,7 +26,7 @@
 
 @layer components {
   [data-fade] {
-    @apply duration-[300ms] opacity-0 transition ease-out translate-y-10 motion-reduce:opacity-100 motion-reduce:translate-y-0;
+    @apply duration-300 opacity-0 transition ease-out translate-y-10 motion-reduce:opacity-100 motion-reduce:translate-y-0;
   }
 
   .fade-in-start [data-fade] {

@@ -25,7 +25,7 @@ const ProjectComponent: NextPage = () => {
           </div>
           <div className="hidden lg:w-1/2 lg:flex items-center dark:text-white text-black lg:justify-end sm:hidden 2xl:pr-32">
             <Link href="/project">
-              <a className="cursor-pointer font-text">See all projects →</a>
+              <a className="cursor-pointer font-text ">See all projects →</a>
             </Link>
           </div>
           <div className="text-white grid gap-4 py-5 grid-cols-2 lg:grid-cols-4 lg:gap-12 md:gap-4 xl:gap-4">
