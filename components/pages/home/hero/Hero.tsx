@@ -11,7 +11,7 @@ import CustomTooltip from '../../../tooltip/custom-tooltip';
 import TooltipCustom from '../../../tooltip/Tooltip-custom';
 
 const styles = {
-  hero: 'text-black dark:bg-black dark:text-white bg-white transition pt-20 sm:pt-28 justify-center',
+  hero: 'text-black dark:bg-black dark:text-white bg-white transition pt-28 justify-center',
   heroContainer:
     'flex flex-col lg:flex-row mx-auto w-full lg:px-24 xl:px-36 2xl:px-56 lg:space-x-14 items-center justify-center',
   myName:
