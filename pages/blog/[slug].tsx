@@ -90,7 +90,7 @@ const Post = ({ post }: { post: MDXPost }) => {
           fade-in="2"
           className="flex w-full font-text font-normal text-base space-x-8 mt-5 xl:px-0"
         >
-          <article className="w-full sm:w-[75%]">
+          <article className="w-full sm:w-[75%] font-text">
             <MDXRemote {...post.source} components={blogPostComponents} />
           </article>
           <TableOfContent tableOfContent={tableContent} />

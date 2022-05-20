@@ -11,7 +11,7 @@ const HeaderPost: NextPage<Props> = ({ post }) => {
   const day = dayjs(post.date).format('MMM D, YYYY');
   return (
     <div fade-in="1">
-      <h1 className="font-display font-extrabold text-3xl sm:text-4xl">
+      <h1 className="font-display font-bold text-3xl sm:text-3xl">
         {post.title}
       </h1>
       <p className="pt-2 font-text text-base">Muhammad Vikri · {day}</p>
