@@ -10,7 +10,7 @@ type Props = {
 const HeaderPost: NextPage<Props> = ({ post }) => {
   const day = dayjs(post.date).format('MMM D, YYYY');
   return (
-    <div data-fade="1">
+    <div fade-in="1">
       <h1 className="font-display font-extrabold text-3xl sm:text-4xl">
         {post.title}
       </h1>

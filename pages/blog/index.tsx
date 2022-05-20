@@ -6,7 +6,7 @@ import { PostMeta } from '../../type/mdxType';
 import useLoaded from '../../hooks/use-loading';
 
 export async function getStaticProps() {
-  const posts = getAllPost().map((post) => post.meta);
+  const posts = getAllPost('blog').map((post) => post.meta);
 
   return {
     props: {
@@ -33,12 +33,12 @@ const Blog = ({ posts }: { posts: PostMeta[] }) => {
           <div className="flex flex-wrap flex-col items-start mt-10 px-3 lg:px-32 2xl:px-60 sm:items-start sm:justify-start sm:w-full">
             <div className="mb-8">
               <h1
-                data-fade="1"
+                fade-in="1"
                 className="font-display text-3xl sm:text-4xl font-bold dark:text-white text-black lg:text-4xl"
               >
                 Blog
               </h1>
-              <p data-fade="2" className="py-2">
+              <p fade-in="2" className="py-2">
                 I love post anything in here
               </p>
             </div>

@@ -1,13 +1,16 @@
 import path from 'path';
-import { Post } from '../type/mdxType';
+import { ContentType, Post } from '../type/mdxType';
 import { readFileSync } from 'fs';
 import matter from 'gray-matter';
 import { sync } from 'glob';
 
-const BLOG_PATH = path.join(process.cwd(), 'commons/contents/blog');
+const BLOG_PATH = path.join(process.cwd(), 'commons', 'contents', 'blog');
 
-export const getSlugs = (): string[] => {
-  const paths = sync(`${BLOG_PATH}/*.mdx`);
+export const getSlugs = (type: ContentType): string[] => {
+  // const paths = sync(`${BLOG_PATH}/*.mdx`);
+  const paths = sync(
+    path.join(process.cwd(), 'commons', 'contents', type, '*.mdx')
+  );
 
   return paths.map((path) => {
     const parts = path.split('/');
@@ -17,9 +20,9 @@ export const getSlugs = (): string[] => {
   });
 };
 
-export const getAllPost = () => {
-  const blog = getSlugs()
-    .map((slug) => getPostFromSlug(slug))
+export const getAllPost = (type: ContentType) => {
+  const blog = getSlugs(type)
+    .map((slug) => getPostFromSlug(type, slug))
     .sort(
       (a, b) =>
         new Date(b.meta.date).getTime() - new Date(a.meta.date).getTime()
@@ -27,8 +30,14 @@ export const getAllPost = () => {
   return blog;
 };
 
-export const getPostFromSlug = (slug: string): Post => {
-  const postPath = path.join(BLOG_PATH, `${slug}.mdx`);
+export const getPostFromSlug = (type: ContentType, slug: string): Post => {
+  const postPath = path.join(
+    process.cwd(),
+    'commons',
+    'contents',
+    type,
+    `${slug}.mdx`
+  );
   const source = readFileSync(postPath);
 
   const { content, data } = matter(source);

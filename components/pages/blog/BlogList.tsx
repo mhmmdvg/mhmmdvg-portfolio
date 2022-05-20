@@ -13,7 +13,7 @@ const BlogList = ({ posts }: ListProps) => {
   return (
     <>
       {posts.map((item) => (
-        <div key={item.slug} data-fade="3">
+        <div key={item.slug} fade-in="3">
           <div className="flex w-full flex-row">
             <div className="flex flex-col w-full pr-4 sm:pr-10">
               <p className="font-text text-sm opacity-90">
@@ -31,14 +31,14 @@ const BlogList = ({ posts }: ListProps) => {
             <div className="relative flex w-28 h-20 sm:w-44 sm:h-32 rounded-lg bg-white self-center">
               <Image
                 className="object-cover rounded-md"
-                src={item.thumbnailUrl}
+                src={`/assets/blog/${item.thumbnailUrl}`}
                 alt={item.title}
                 layout="fill"
               />
             </div>
           </div>
           <hr
-            data-fade="4"
+            fade-in="4"
             className="mx-auto my-6 dark:border-[#383838] border-[#eaeaea] xl:w-[68rem]"
           />
         </div>

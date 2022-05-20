@@ -31,7 +31,7 @@ const Hero = () => {
     <section className={`${isLoaded && 'fade-in-start'}`}>
       <div className={styles.hero}>
         <div className="container mx-auto">
-          <div className={styles.heroContainer} data-fade="1">
+          <div className={styles.heroContainer} fade-in="1">
             {/* w-full px-3 sm:w-3/4 xl:w-1/2 xl:pr-0 lg:w-1/2 */}
             <div className="text-center w-full lg:px-0 lg:text-left">
               <h1 className={styles.myName}>

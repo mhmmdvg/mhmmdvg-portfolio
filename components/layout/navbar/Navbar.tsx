@@ -6,14 +6,6 @@ import M from '../../svg/M';
 
 import DarkMode from './DarkMode';
 
-const twstyles = {
-  header: 'fixed w-full border-b backdrop-blur z-20 transition-all',
-  navContainer:
-    'h-16 xl:w-[62rem] xl:h-[65px] lg:h-[60px] container mx-auto px-8 xl:px-0',
-  navbar: 'flex justify-between items-center h-full py-4 ',
-  line: 'mx-auto dark:border-[#383838] border-[#eaeaea]',
-};
-
 interface NavItemType {
   name: string;
   path: string;

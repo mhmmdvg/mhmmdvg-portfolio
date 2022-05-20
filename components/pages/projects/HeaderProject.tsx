@@ -2,7 +2,7 @@ import React from 'react';
 
 const HeaderProject = () => {
   return (
-    <div data-fade="1">
+    <div fade-in="1">
       <h1 className="font-sfpro text-3xl sm:text-4xl font-bold dark:text-white text-black lg:text-4xl">
         Projects
       </h1>

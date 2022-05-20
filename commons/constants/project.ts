@@ -1,6 +1,6 @@
-import BelangImage from '../../public/project/belangproject.png';
-import ProjectOne from '../../public/project/project1.png';
-import ProjectTwo from '../../public/project/project2.png';
+import BelangImage from '../../public/assets/project/belang-project.png';
+import ProjectOne from '../../public/assets/project/icon-ibox.png';
+import ProjectTwo from '../../public/assets/project/my-site.png';
 
 const ListProject = [
   {

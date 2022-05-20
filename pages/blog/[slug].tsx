@@ -22,7 +22,7 @@ type MDXPost = {
 
 export const getStaticProps: GetStaticProps = async ({ params }) => {
   const { slug } = params as { slug: string };
-  const { content, meta } = getPostFromSlug(slug);
+  const { content, meta } = getPostFromSlug('blog', slug);
   const mdxSource = await serialize(content, {
     mdxOptions: {
       rehypePlugins: [
@@ -37,7 +37,7 @@ export const getStaticProps: GetStaticProps = async ({ params }) => {
 };
 
 export const getStaticPaths: GetStaticPaths = async () => {
-  const paths = getSlugs().map((slug) => ({
+  const paths = getSlugs('blog').map((slug) => ({
     params: { slug: slug.replace('.mdx', '') },
   }));
 
@@ -77,7 +77,7 @@ const Post = ({ post }: { post: MDXPost }) => {
         }`}
       >
         <div
-          data-fade="1"
+          fade-in="1"
           className="sm:hidden text-sm mb-2 flex items-center space-x-2 cursor-pointer"
           onClick={() => router.back()}
         >
@@ -95,7 +95,7 @@ const Post = ({ post }: { post: MDXPost }) => {
         <p className="pt-2 font-text text-base">Muhammad Vikri · {day}</p> */}
 
         <div
-          data-fade="2"
+          fade-in="2"
           className="flex w-full font-text font-normal text-base space-x-8 mt-5 xl:px-0"
         >
           <article className="w-full sm:w-[75%]">
