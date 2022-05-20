@@ -13,7 +13,7 @@ import TableOfContent from '../../components/pages/blog/TableOfContent';
 import { useRouter } from 'next/router';
 import useLoaded from '../../hooks/use-loading';
 import HeaderPost from '../../components/pages/blog/HeaderPost';
-import { blogPostComponents } from '../../components/pages/blog/Blog-post-component';
+import { blogPostComponents } from '../../components/pages/blog/BlogPost-component';
 
 type MDXPost = {
   source: MDXRemoteSerializeResult<Record<string, unknown>>;
