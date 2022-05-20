@@ -10,10 +10,10 @@ import rehypePrism from 'rehype-prism-plus';
 import { useEffect, useState } from 'react';
 import remarkGfm from 'remark-gfm';
 import TableOfContent from '../../components/pages/blog/TableOfContent';
-import Image from 'next/image';
 import { useRouter } from 'next/router';
 import useLoaded from '../../hooks/use-loading';
 import HeaderPost from '../../components/pages/blog/HeaderPost';
+import { blogPostComponents } from '../../components/pages/blog/Blog-post-component';
 
 type MDXPost = {
   source: MDXRemoteSerializeResult<Record<string, unknown>>;
@@ -86,47 +86,12 @@ const Post = ({ post }: { post: MDXPost }) => {
 
         <HeaderPost post={post.meta} />
 
-        {/* <h1
-          data-fade="1"
-          className="font-display font-extrabold text-3xl sm:text-4xl"
-        >
-          {post.meta.title}
-        </h1>
-        <p className="pt-2 font-text text-base">Muhammad Vikri · {day}</p> */}
-
         <div
           fade-in="2"
           className="flex w-full font-text font-normal text-base space-x-8 mt-5 xl:px-0"
         >
           <article className="w-full sm:w-[75%]">
-            <MDXRemote
-              {...post.source}
-              components={{
-                h2: (props) => (
-                  <h2
-                    {...props}
-                    className="text-2xl font-bold font-text mt-5 mb-2"
-                  />
-                ),
-                h3: (props) => (
-                  <h3
-                    {...props}
-                    className="text-xl font-bold font-text mt-5 mb-2"
-                  />
-                ),
-                a: (props) => <a {...props} className="text-blue-500" />,
-                p: (props) => (
-                  <p
-                    {...props}
-                    className="font-text text-base tracking-normal"
-                  />
-                ),
-                ul: (props) => (
-                  <ul {...props} className="my-2 px-4 list-disc" />
-                ),
-                Image,
-              }}
-            />
+            <MDXRemote {...post.source} components={blogPostComponents} />
           </article>
           <TableOfContent tableOfContent={tableContent} />
         </div>
