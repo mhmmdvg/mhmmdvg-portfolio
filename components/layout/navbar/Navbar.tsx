@@ -52,28 +52,26 @@ const Navbar: NextPage = () => {
 
   return (
     <header
-      className={`fixed font-text w-full border-b backdrop-blur z-20 transition-all ${
+      className={`fixed font-text w-full border-b-[1.4px] backdrop-blur z-20 transition-all ${
         showBorder || showBorderOnPage
           ? 'dark:border-[#1a1a1a] border-[#e9e9e9]'
           : 'border-transparent'
       }`}
     >
       {/* // <header className={`${twstyles.header}`}> */}
-      <div className="h-16 xl:w-[62rem] xl:h-[65px] lg:h-[60px] container mx-auto px-8 xl:px-0">
-        <nav className="flex justify-between items-center h-full py-4">
+      <nav className="h-16 xl:w-[62rem] xl:h-[62px] lg:h-[60px] container mx-auto px-8 xl:px-0">
+        <div className="flex justify-between items-center h-full py-4">
           <div className="w-6 sm:w-10 xl:w-11 lg:w-12">
             <M />
           </div>
           {/* xl:text-lg lg:text-lg font-sfpro */}
-          <ul className="flex space-x-5 sm:space-x-10 text-sm sm:text-base text-[#494949] dark:text-[#494949]">
+          <ul className="flex space-x-5 sm:space-x-10 text-sm sm:text-base text-[#666666] dark:text-[#888888]">
             {LinkNavItems.map((item) => (
               <li key={item.name}>
                 <Link href={item.path}>
                   <a
                     className={`hover:text-black dark:hover:text-white transition cursor-pointer ${
-                      pathNow === item.value
-                        ? 'text-black dark:text-white font-bold'
-                        : ''
+                      pathNow === item.value ? 'text-black dark:text-white' : ''
                     }`}
                   >
                     {item.name}
@@ -84,8 +82,8 @@ const Navbar: NextPage = () => {
           </ul>
 
           <DarkMode />
-        </nav>
-      </div>
+        </div>
+      </nav>
       {/* <hr className={`${twstyles.line} ${showBorder ? '' : 'hidden'}`} /> */}
     </header>
   );
