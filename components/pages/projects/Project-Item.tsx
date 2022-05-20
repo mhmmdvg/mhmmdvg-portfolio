@@ -14,7 +14,8 @@ type Props = {
 const ProjectItem: NextPage<Props> = ({ data }) => {
   return (
     <div className="sm:min-h-[340px] pb-6 sm:pb-2 cursor-pointer flex flex-col h-full rounded-lg border dark:border-[#383838] border-[#eaeaea]">
-      <div className="relative flex h-52 w-full">
+      {/* relative flex items-end  w-full xl:h-[60%] rounded-t */}
+      <div className="relative flex h-52 w-full items-end sm:h-[60%] rounded-t">
         <Image
           className="object-cover rounded-t-lg"
           src={`/assets/project/${data.thumbnailUrl}`}
@@ -22,13 +23,14 @@ const ProjectItem: NextPage<Props> = ({ data }) => {
           layout="fill"
           property="true"
         />
-        <div className="absolute flex space-x-2 flex-wrap inset-y-44 inset-x-3">
+        <div className="flex flex-wrap z-[2] absolute p-2">
           {data.tags.map((item) => (
             <div
               key={item}
-              className="bg-black opacity-50 py-0.5 px-3 rounded-full"
+              // text-xs text-brand-white bg-brand-black/40 px-3 py-1 rounded-xl mx-1 my-1
+              className="bg-black text-xs text-white opacity-50 px-3 py-0.5 rounded-xl mx-1 my-1"
             >
-              <p className="text-xs text-white">{item}</p>
+              {item}
             </div>
           ))}
         </div>
