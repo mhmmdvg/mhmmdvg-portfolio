@@ -1,10 +1,4 @@
 import React from 'react';
-import {
-  AiOutlineInstagram,
-  AiFillLinkedin,
-  AiOutlineGithub,
-  AiFillMediumSquare,
-} from 'react-icons/ai';
 import { socialMedia } from '../../../../commons/constants/social-media';
 import useLoaded from '../../../../hooks/use-loading';
 import CustomTooltip from '../../../tooltip/custom-tooltip';
@@ -45,9 +39,8 @@ const Hero = () => {
                 Front-end Developer and Designer.
               </h1>
               {/* <M /> */}
-              <p className="py-3 font-text px-3 text-base sm:px-0 sm:text-lg xl:text-base md:text-base">
-                Hello! My name is Muhammad Vikri. I’m a student in Brawijaya
-                University. I like to{' '}
+              <p className="py-3 font-text px-6 text-base sm:px-0 sm:text-lg xl:text-base md:text-base">
+                I’m a student in Brawijaya University. I like to{' '}
                 <span className="underline decoration-sky-500">design</span> and
                 learn about{' '}
                 <span className="underline decoration-indigo-500">
@@ -60,7 +53,7 @@ const Hero = () => {
                 about technologies.
               </p>
               <button className={styles.button}>
-                <div className="dark:text-white dark:bg-black bg-white text-black transition py-3 px-5 rounded-sm">
+                <div className="dark:text-white dark:bg-black bg-white text-black transition py-2 px-5 rounded-sm">
                   Contact Me
                 </div>
               </button>
