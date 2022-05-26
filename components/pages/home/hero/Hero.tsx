@@ -39,7 +39,7 @@ const Hero = () => {
                 Front-end Developer and Designer.
               </h1>
               {/* <M /> */}
-              <p className="py-3 font-text px-6 text-base sm:px-0 sm:text-lg xl:text-base md:text-base">
+              <p className="py-3 font-text px-6 text-base sm:px-0 sm:text-lg md:px-20 lg:px-0 xl:text-base md:text-base">
                 I’m a student in Brawijaya University. I like to{' '}
                 <span className="underline decoration-sky-500">design</span> and
                 learn about{' '}
@@ -99,13 +99,7 @@ const Hero = () => {
                 Contact Me
               </button> */}
 
-              <div className="hidden sm:flex flex-row space-x-6 my-4 rounded-2xl">
-                {/* <AiOutlineInstagram className="w-14 h-14" />
-                <AiFillLinkedin className="w-14 h-14" />
-                <AiOutlineGithub className="w-14 h-14" />
-                <AiFillMediumSquare className="w-14 h-14" /> */}
-                {/* {socialMedia.map((item) => ())} */}
-
+              <div className="hidden lg:flex flex-row space-x-6 my-4 rounded-2xl">
                 {socialMedia.map((item) => (
                   <CustomTooltip
                     key={item.name}

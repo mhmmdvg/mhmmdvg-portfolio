@@ -7,15 +7,13 @@ import useLoaded from '../../../../hooks/use-loading';
 const twstyles = {
   body: 'dark:bg-black transition bg-white pt-2 sm:pt-16',
   container:
-    'flex flex-wrap justify-center mt-10 px-3 sm:px-24 xl:px-36 2xl:px-56 items-center content-center lg:justify-start ',
+    'flex flex-col justify-center mt-10 px-3 sm:px-12 xl:px-36 2xl:px-56 items-center content-center lg:justify-start ',
   title:
     'font-display text-3xl sm:text-3xl font-bold dark:text-white text-black lg:text-4xl',
   grid: 'grid grid-cols-2 gap-6 py-4 lg:grid-cols-4 ',
 };
 
 const Tools: NextPage = () => {
-  const isLoaded = useLoaded();
-
   return (
     <section className={twstyles.body}>
       <div className="container mx-auto">
