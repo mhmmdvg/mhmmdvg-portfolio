@@ -15,7 +15,7 @@ type Props = {
 
 const ProjectItem: NextPage<Props> = ({ data }) => {
   return (
-    <div className="sm:min-h-[340px] pb-6 sm:pb-2 cursor-pointer flex flex-col h-full rounded-lg border dark:border-[#383838] border-[#eaeaea]">
+    <div className="sm:min-h-[340px] pb-6 sm:pb-2 flex flex-col h-full rounded-lg border dark:border-[#383838] border-[#eaeaea]">
       {/* relative flex items-end  w-full xl:h-[60%] rounded-t */}
       <div className="relative flex h-52 w-full items-end sm:h-[60%] rounded-t">
         <Image
@@ -42,12 +42,12 @@ const ProjectItem: NextPage<Props> = ({ data }) => {
         {data.link ? (
           <h2
             onClick={() => window.open(data.link)}
-            className="font-display text-xl font-semibold hover:underline"
+            className="font-display text-xl font-semibold hover:underline cursor-pointer"
           >
             {data.title}
           </h2>
         ) : (
-          <h2 className="font-display text-xl font-semibold hover:underline">
+          <h2 className="font-display text-xl font-semibold cursor-pointer">
             {data.title}
           </h2>
         )}
