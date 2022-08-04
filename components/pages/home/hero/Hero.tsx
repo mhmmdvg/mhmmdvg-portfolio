@@ -28,7 +28,7 @@ const Hero = () => {
           <div className={styles.heroContainer} fade-in="1">
             <div className="text-center w-full lg:px-0 lg:text-left">
               <h1 className={styles.myName}>
-                Hello, I’m
+                Hello, I’m{' '}
                 <span className="font-extrabold text-transparent bg-clip-text bg-gradient-to-r from-purple-600 to-pink-600 ">
                   Muhammad Vikri
                 </span>
