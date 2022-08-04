@@ -11,7 +11,7 @@ const TableOfContent: NextPage<Props> = ({ tableOfContent }) => {
   const router = useRouter();
 
   return (
-    <aside className="hidden sm:flex w-full flex-col font-text">
+    <aside className="hidden sm:flex flex-col font-text">
       <div className="h-screen sticky top-24 ml-2">
         <div
           className="text-sm mb-2 flex items-center space-x-2 cursor-pointer"

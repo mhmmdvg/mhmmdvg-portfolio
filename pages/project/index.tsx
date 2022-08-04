@@ -3,12 +3,12 @@ import Head from 'next/head';
 import React from 'react';
 import ProjectList from '../../components/pages/projects/ProjectList';
 import useLoaded from '../../hooks/use-loading';
-import { getAllPost } from '../../utils/mdx';
+import { getAllPost, getAllProject } from '../../utils/mdx';
 import { ProjectMeta } from '../../type/mdxType';
 import Header from '../../components/header/Header';
 
 export async function getStaticProps() {
-  const projects = getAllPost('project').map((post) => post.meta);
+  const projects = getAllProject('project').map((post) => post.meta);
 
   return {
     props: {

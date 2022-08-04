@@ -3,6 +3,11 @@ export interface Post {
   meta: PostMeta;
 }
 
+export interface Project {
+  content: string;
+  meta: ProjectMeta;
+}
+
 export type ContentType = 'blog' | 'project';
 
 export interface PostMeta {
@@ -20,6 +25,7 @@ export interface ProjectMeta {
   date: string;
   thumbnailUrl?: string | any;
   tags: string[];
+  link?: string | any;
 }
 
 export interface ToCHeadingProps {

@@ -1,5 +1,5 @@
 import path from 'path';
-import { ContentType, Post } from '../type/mdxType';
+import { ContentType, Post, Project } from '../type/mdxType';
 import { readFileSync } from 'fs';
 import matter from 'gray-matter';
 import { sync } from 'glob';
@@ -51,6 +51,41 @@ export const getPostFromSlug = (type: ContentType, slug: string): Post => {
       thumbnailUrl: data.thumbnailUrl,
       date: data.date,
       tags: (data.tags ?? []).sort(),
+    },
+  };
+};
+
+export const getAllProject = (type: ContentType) => {
+  const blog = getSlugs(type)
+    .map((slug) => getProject(type, slug))
+    .sort(
+      (a, b) =>
+        new Date(b.meta.date).getTime() - new Date(a.meta.date).getTime()
+    );
+  return blog;
+};
+
+export const getProject = (type: ContentType, slug: string): Project => {
+  const postPath = path.join(
+    process.cwd(),
+    'commons',
+    'contents',
+    type,
+    `${slug}.mdx`
+  );
+  const source = readFileSync(postPath);
+
+  const { content, data } = matter(source);
+
+  return {
+    content,
+    meta: {
+      title: data.title ?? slug,
+      description: data.description,
+      thumbnailUrl: data.thumbnailUrl,
+      date: data.date,
+      tags: (data.tags ?? []).sort(),
+      link: data.link,
     },
   };
 };

@@ -1,3 +1,4 @@
+import { Item } from 'framer-motion/types/components/Reorder/Item';
 import { NextPage } from 'next';
 import Image from 'next/image';
 import React from 'react';
@@ -8,6 +9,7 @@ type Props = {
     description: string;
     thumbnailUrl?: string;
     tags: string[];
+    link?: string;
   };
 };
 
@@ -36,7 +38,18 @@ const ProjectItem: NextPage<Props> = ({ data }) => {
         </div>
       </div>
       <div className="px-4 py-2 flex flex-col">
-        <h2 className="font-display text-2xl font-semibold">{data.title}</h2>
+        {data.link ? (
+          <h2
+            onClick={() => window.open(data.link)}
+            className="font-display text-xl font-semibold hover:underline"
+          >
+            {data.title}
+          </h2>
+        ) : (
+          <h2 className="font-display text-xl font-semibold hover:underline">
+            {data.title}
+          </h2>
+        )}
         <p className="text-sm font-sans opacity-75 py-2 tracking-wide">
           {data.description}
         </p>
