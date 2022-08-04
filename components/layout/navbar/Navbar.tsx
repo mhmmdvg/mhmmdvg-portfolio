@@ -16,7 +16,7 @@ const LinkNavItems: Array<NavItemType> = [
   { name: 'Home', path: '/', value: '' },
   { name: 'Blog', path: '/blog', value: 'blog' },
   { name: 'Project', path: '/project', value: 'project' },
-  { name: 'About Me', path: '/aboutme', value: 'aboutme' },
+  { name: 'About', path: '/about', value: 'about' },
 ];
 
 const Navbar: NextPage = () => {
@@ -50,7 +50,6 @@ const Navbar: NextPage = () => {
           : 'border-transparent'
       }`}
     >
-      {/* // <header className={`${twstyles.header}`}> */}
       <nav className="h-16 xl:w-[62rem] xl:h-[62px] lg:h-[60px] container mx-auto px-8 xl:px-0">
         <div className="flex justify-between items-center h-full py-4">
           <div className="w-6 sm:w-10 xl:w-11 lg:w-12">

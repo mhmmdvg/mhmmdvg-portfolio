@@ -2,11 +2,10 @@ import { NextPage } from 'next';
 import Head from 'next/head';
 import React from 'react';
 import ProjectList from '../../components/pages/projects/ProjectList';
-import ListProject from '../../commons/constants/project';
 import useLoaded from '../../hooks/use-loading';
-import HeaderProject from '../../components/pages/projects/HeaderProject';
 import { getAllPost } from '../../utils/mdx';
 import { ProjectMeta } from '../../type/mdxType';
+import Header from '../../components/header/Header';
 
 export async function getStaticProps() {
   const projects = getAllPost('project').map((post) => post.meta);
@@ -36,7 +35,9 @@ const Project = ({ projects }: { projects: ProjectMeta[] }) => {
       <section className={`${twstyles.body} ${isLoaded && 'fade-in-start'}`}>
         <div className="container mx-auto">
           <div className={twstyles.container}>
-            <HeaderProject />
+            <Header subtitle="This is my project, you can see here">
+              Project
+            </Header>
             <ProjectList project={projects} />
           </div>
         </div>
