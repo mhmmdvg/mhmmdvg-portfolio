@@ -12,18 +12,7 @@ const TechToolsItem: NextPage<ToolsItemProps> = (props) => {
     // border light DFDFDF
     <div className=" h-[100px] border cursor-pointer ease-in-out hover:scale-110 duration-200 dark:border-[#383838] border-[#eaeaea] rounded-lg p-2">
       <div className="flex flex-row items-center h-full px-4 space-x-2 ">
-        <div className="w-full lg:w-1/2 flex justify-center">
-          {/* <Image
-          className={
-            name === 'Figma' || name === 'Flutter' ? '' : 'rounded-full'
-          }
-          src={icons}
-          width={50}
-          height={50}
-          alt={alt}
-        /> */}
-          {icons}
-        </div>
+        <div className="w-full lg:w-1/2 flex justify-center">{icons}</div>
         <p className="font-text sm:w-1/2 hidden lg:flex">{name}</p>
       </div>
     </div>

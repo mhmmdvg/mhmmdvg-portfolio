@@ -26,11 +26,9 @@ const Hero = () => {
       <div className={styles.hero}>
         <div className="container mx-auto">
           <div className={styles.heroContainer} fade-in="1">
-            {/* w-full px-3 sm:w-3/4 xl:w-1/2 xl:pr-0 lg:w-1/2 */}
             <div className="text-center w-full lg:px-0 lg:text-left">
               <h1 className={styles.myName}>
-                Hello, I’m{' '}
-                {/* transition-all bg-size-200 bg-pos-0 hover:bg-pos-100 duration-300 */}
+                Hello, I’m
                 <span className="font-extrabold text-transparent bg-clip-text bg-gradient-to-r from-purple-600 to-pink-600 ">
                   Muhammad Vikri
                 </span>

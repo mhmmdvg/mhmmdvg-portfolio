@@ -5,6 +5,7 @@ import { NextPage } from 'next';
 const DarkMode: NextPage = () => {
   const [mounted, setMounted] = useState(false);
   const { theme, setTheme } = useTheme();
+
   useEffect(() => setMounted(true), []);
 
   return (

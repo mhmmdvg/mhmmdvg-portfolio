@@ -10,7 +10,7 @@ const ProjectList = ({ project }: Props) => {
   return (
     <div
       fade-in="2"
-      className="grid grid-cols-1 gap-4 sm:gap-6 py-8 sm:grid-cols-2 "
+      className="grid grid-cols-1 gap-4 sm:gap-6 sm:grid-cols-2 "
     >
       {project.map((data) => (
         <ProjectItem key={data.title} data={data} />
