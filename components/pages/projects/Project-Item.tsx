@@ -23,6 +23,7 @@ const ProjectItem: NextPage<Props> = ({ data }) => {
           src={`/assets/project/${data.thumbnailUrl}`}
           alt={data.title}
           layout="fill"
+          objectFit="cover"
           property="true"
         />
         <div className="flex flex-wrap z-[2] absolute p-2">
