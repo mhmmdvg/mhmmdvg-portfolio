@@ -1,4 +1,3 @@
-import { Item } from 'framer-motion/types/components/Reorder/Item';
 import { NextPage } from 'next';
 import Image from 'next/image';
 import React from 'react';
