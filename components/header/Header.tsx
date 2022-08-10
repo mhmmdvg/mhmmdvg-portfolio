@@ -8,7 +8,7 @@ type Props = {
 
 const Header: NextPage<Props> = ({ children, subtitle }) => {
   return (
-    <div className="mb-8">
+    <div className="mb-2">
       <h1
         fade-in="1"
         className="font-display text-3xl sm:text-4xl font-bold dark:text-white text-black lg:text-4xl"

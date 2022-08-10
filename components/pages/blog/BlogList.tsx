@@ -11,11 +11,11 @@ type ListProps = {
 
 const BlogList = ({ posts }: ListProps) => {
   return (
-    <>
+    <div className="mt-8">
       {posts.map((item) => (
-        <div key={item.slug} fade-in="3">
+        <div key={item.slug} fade-in="4">
           <div className="flex w-full flex-row">
-            <div className="flex flex-col w-full pr-4 sm:pr-10">
+            <div className="flex-col w-full pr-10 sm:pr-10">
               <p className="font-text text-sm opacity-90">
                 Muhammad Vikri · {dayjs(item.date).format('MMM D, YYYY')}
               </p>
@@ -39,11 +39,11 @@ const BlogList = ({ posts }: ListProps) => {
           </div>
           <hr
             fade-in="4"
-            className="mx-auto my-6 dark:border-[#383838] border-[#eaeaea] xl:w-[68rem]"
+            className="mx-auto my-6 dark:border-[#383838] border-[#eaeaea] xl:w-full"
           />
         </div>
       ))}
-    </>
+    </div>
   );
 };
 
