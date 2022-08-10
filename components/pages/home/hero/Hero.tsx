@@ -50,7 +50,12 @@ const Hero = () => {
                 </span>{' '}
                 about technologies.
               </p>
-              <button className={styles.button}>
+              <button
+                className={styles.button}
+                onClick={() =>
+                  (window.location.href = 'mailto:muhammadvikrii99@gmail.com')
+                }
+              >
                 <div className="dark:text-white dark:bg-black bg-white text-black transition py-2 px-5 rounded-sm">
                   Contact Me
                 </div>
