@@ -53,7 +53,11 @@ const Navbar: NextPage = () => {
       <nav className="h-16 xl:w-[62rem] xl:h-[62px] lg:h-[60px] container mx-auto px-8 xl:px-0">
         <div className="flex justify-between items-center h-full py-4">
           <div className="w-6 sm:w-10 xl:w-11 lg:w-12">
-            <M />
+            <Link href="/">
+              <a>
+                <M />
+              </a>
+            </Link>
           </div>
           {/* xl:text-lg lg:text-lg font-sfpro */}
           <ul className="flex space-x-5 sm:space-x-10 text-sm sm:text-base text-[#666666] dark:text-[#888888]">
