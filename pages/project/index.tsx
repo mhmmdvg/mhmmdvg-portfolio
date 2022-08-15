@@ -6,6 +6,7 @@ import useLoaded from '../../hooks/use-loading';
 import { getAllPost, getAllProject } from '../../utils/mdx';
 import { ProjectMeta } from '../../type/mdxType';
 import Header from '../../components/header/Header';
+import HeadTitle from '../../components/header/Head';
 
 export async function getStaticProps() {
   const projects = getAllProject('project').map((post) => post.meta);
@@ -28,9 +29,7 @@ const Project = ({ projects }: { projects: ProjectMeta[] }) => {
 
   return (
     <>
-      <Head>
-        <title>Projects | Mhmmdvg</title>
-      </Head>
+      <HeadTitle>Projects | Mhmmdvg</HeadTitle>
 
       <section className={`${twstyles.body} ${isLoaded && 'fade-in-start'}`}>
         <div className="container mx-auto">

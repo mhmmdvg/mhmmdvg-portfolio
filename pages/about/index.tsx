@@ -1,4 +1,5 @@
 import React from 'react';
+import HeadTitle from '../../components/header/Head';
 import Header from '../../components/header/Header';
 import HeaderAbout from '../../components/pages/about/HeaderAbout';
 import useLoaded from '../../hooks/use-loading';
@@ -13,13 +14,16 @@ function About() {
   const isLoaded = useLoaded();
 
   return (
-    <section className={`${twstyles.body} ${isLoaded && 'fade-in-start'}`}>
-      <div className="container mx-auto">
-        <div className={twstyles.container}>
-          <HeaderAbout />
+    <>
+      <HeadTitle>About | Mhmmdvg</HeadTitle>
+      <section className={`${twstyles.body} ${isLoaded && 'fade-in-start'}`}>
+        <div className="container mx-auto">
+          <div className={twstyles.container}>
+            <HeaderAbout />
+          </div>
         </div>
-      </div>
-    </section>
+      </section>
+    </>
   );
 }
 

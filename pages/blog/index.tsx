@@ -6,6 +6,7 @@ import { PostMeta } from '../../type/mdxType';
 import useLoaded from '../../hooks/use-loading';
 import Header from '../../components/header/Header';
 import Search from '../../components/search/Search';
+import HeadTitle from '../../components/header/Head';
 
 export async function getStaticProps() {
   const posts = getAllPost('blog').map((post) => post.meta);
@@ -31,10 +32,7 @@ const Blog = ({ posts }: { posts: PostMeta[] }) => {
 
   return (
     <>
-      <Head>
-        <title>Blog | Mhmmdvg</title>
-      </Head>
-
+      <HeadTitle>Blog | Mhmmdvg</HeadTitle>
       <section
         className={`dark:bg-black bg-white transition pt-11 font-text sm:pt-16 ${
           isLoaded && 'fade-in-start'
