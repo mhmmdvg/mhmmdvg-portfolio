@@ -5,6 +5,7 @@ import Java from '../../../svg/Java';
 import JsIcon from '../../../svg/Js';
 import NextJS from '../../../svg/NextJS';
 import ReactIcons from '../../../svg/ReactIcons';
+import Swift from '../../../svg/Swift';
 import TypescriptIcons from '../../../svg/Ts';
 
 interface ToolsType {
@@ -32,6 +33,10 @@ const IconsTools: Array<ToolsType> = [
   {
     icons: <NextJS />,
     name: 'NextJS',
+  },
+  {
+    icons: <Swift />,
+    name: 'Swift',
   },
   {
     icons: <Flutter />,
